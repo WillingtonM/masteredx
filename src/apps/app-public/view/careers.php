@@ -1,10 +1,9 @@
 <div class="container pt-10 min-vh-100">
-
-    <div class="page-header min-height-200 mt-4 wait-2s" data-animation="animated pulse" style="border-radius: 35px;">
-        <span class="mask opacity-6/" style="background-color: rgb(0, 0, 0, .3); ">
+    <div class="page-header min-height-300 border-radius-xl/ mt-4 wait-2s" data-animation="animated pulse" style="border-radius: 35px;">
+        <span class="mask" style="background-color: rgb(41, 55, 75, .5);">
             <div class="p-0">
                 <div class="text-center py-3 pt-5">
-                    <h3 class="font-weight-bolder text-white"> <span class="text-danger me-2"> Careers </span> <i> </i> </h3>
+                    <h3 class="font-weight-bolder text-white"> Apply for our <span class="text-warning"> Career </span> Opportunities </h3>
                     <small class="m-0 text-light">
                         Apply to our current vacant opportuniets
                     </small>
@@ -13,12 +12,13 @@
         </span>
     </div>
 
-    <div class="mx-4 mt-n6 overflow-hidden mb-5" style="z-index: 10 !important;">
+    <div class="card blur/ shadow-blur/ mx-4 mt-n6 overflow-hidden bg-white" style="border-radius: 20px;">
+
         <div class="row gx-4 p-3" style="z-index: 10 !important;">
             <?php if (is_array($careers_data)) : ?>
                 <?php foreach ($careers_data as $key => $career) : ?>
-                    <div class="col-12 px-3 mb-3 bg-white border-radius-xl shadow p-3" style="z-index: 10 !important;">
-                        <div class="d-flex" style="z-index: 999 !important;">
+                    <div class="col-12 mb-0 bg-white border-radius-xl shadow/ p-0 border-bottom/ border-top/ border/" style="z-index: 10 !important;">
+                        <div class="d-flex p-3" style="z-index: 10 !important;">
                             <div class="flex-shrink-0 text-center pt-3 d-none d-md-block">
                                 <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex bg-dark p-4 border-radius-xl">
                                     <i class="fa-solid fa-briefcase fa-2x text-white"></i>
@@ -50,10 +50,12 @@
                                 </div>
                             </div>
                             <div class="job-right my-4 flex-shrink-0 pt-2" style="padding-top: 12px !important;">
-                                <a type="button" class="btn d-block w-100 d-sm-inline-block btn-light" onclick="requestModal(post_modal[16], post_modal[16], {'career':<?= $career['career_id'] ?>})">Apply now</a>
+                                <a type="button" class="btn d-block w-100 d-sm-inline-block btn-light" onclick="requestModal(post_modal[28], post_modal[28], {'career':<?= $career['career_id'] ?>})">Apply now</a>
                             </div>
                         </div>
                     </div>
+                    <hr class="horizontal dark mb-1">
+
                 <?php endforeach; ?>
             <?php else: ?>
                 <p class="col text-dark text-center">

@@ -245,31 +245,48 @@ PRIMARY KEY (`subscription_id`)
 -- DROP TABLE IF EXISTS `events`;
 
 -- ************************************** `events`
+
 CREATE TABLE IF NOT EXISTS `events`
 (
- `event_id`           bigint NOT NULL AUTO_INCREMENT ,
- `user_id`            bigint NOT NULL ,
- `event_description`  text NULL ,
- `event_user_name`    varchar (255) NOT NULL ,
- `event_last_name`    varchar (255) NOT NULL ,
- `event_user_email`   varchar (255) NOT NULL ,
- `event_user_phone`   varchar (255) NULL ,
- `event_company_name` varchar (255) NULL ,
- `event_budget`       varchar (255) NULL ,
- `event_venue`        varchar (255) NULL ,
- `event_office`       varchar (255) NULL ,
- `event_user_count`   INTEGER (11) NULL ,
- `event_price`        varchar (255) NULL ,
- `event_address`      text NULL ,
- `event_message`      text NULL ,
- `event_processed`    tinyint NOT NULL DEFAULT 0 ,
- `event_period`       tinytext NULL ,
- `event_type`         tinytext NULL ,
- `event_host_date`    datetime NULL DEFAULT CURRENT_TIMESTAMP ,
- `event_date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ,
- `event_date_updated` timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+ `event_id`             bigint NOT NULL AUTO_INCREMENT ,
+ `user_id`              bigint NULL ,
+ `event_title`          varchar (255) NULL ,
+ `event_description`    text NULL ,
+ `event_user_name`      varchar (255) NULL ,
+ `event_last_name`      varchar (255) NULL ,
+ `event_user_email`     varchar (255) NULL ,
+ `event_user_phone`     varchar (255) NULL ,
+ `event_alt_user_name`      varchar (255) NULL ,
+ `event_alt_last_name`      varchar (255) NULL ,
+ `event_alt_user_email`     varchar (255) NULL ,
+ `event_alt_user_phone`     varchar (255) NULL ,
+ `event_company_name`   varchar (255) NULL ,
+ `event_budget`         varchar (255) NULL ,
+ `event_venue`          varchar (255) NULL ,
+ `event_user_count`     INTEGER (11) NULL ,
+ `event_price`          varchar (255) NULL ,
+ `event_town`           varchar (255) NULL ,
+ `event_city`           varchar (255) NULL ,
+ `event_province`       varchar (255) NULL ,
+ `event_country`        varchar (255) NULL ,
+ `event_occupation`     varchar (255) NULL ,
+ `event_address`        text NULL ,
+ `collection_addresss`  text NULL ,
+ `delivery_address`     text NULL ,
+ `event_message`        text NULL ,
+ `event_processed`      tinyint NOT NULL DEFAULT 0 ,
+ `event_status`         tinyint default 1 ,
+ `event_period`         tinytext NULL ,
+ `event_type`           tinytext NULL ,
+ `event_begin_date`     datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ `event_end_date`       datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ `event_host_date`      datetime NULL DEFAULT CURRENT_TIMESTAMP ,
+ `event_date_created`   datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+ `event_date_updated`   timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
 
-PRIMARY KEY (`event_id`)
+PRIMARY KEY (`event_id`),
+KEY `fkIdx_1064` (`user_id`),
+CONSTRAINT `FK_1064` FOREIGN KEY `fkIdx_1064` (`user_id`) REFERENCES `users` (`user_id`)
 );
 
 
@@ -351,28 +368,74 @@ CREATE TABLE IF NOT EXISTS `notifications`
 -- DROP TABLE IF EXISTS `api_users`;
 
 -- ************************************** `api_users`
--- CREATE TABLE IF NOT EXISTS `api_users`
--- (
---  `api_user_id`          bigint NOT NULL AUTO_INCREMENT ,
---  `user_id`              bigint NOT NULL ,
---  `oauth_uid`            bigint NULL ,
---  `oauth_provider`       varchar(140) NULL ,
---  `username`             varchar(140) NULL ,
---  `oauth_token`          varchar(255) NULL ,
---  `oauth_token_secret`   varchar(255) NULL ,
---  `first_name`           varchar(140) NULL ,
---  `last_name`            varchar(140) NULL ,
---  `user_email`           varchar(140) NULL ,
---  `user_locale`          varchar(140) NULL ,
---  `user_image`           varchar(140) NULL ,
---  `user_link`            varchar(140) NULL ,
---  `user_date_created`    datetime NULL ,
---  `user_date_updated`    datetime NULL ,
---  `user_status`          tinyint NOT NULL DEFAULT 1 ,
+CREATE TABLE IF NOT EXISTS `api_users`
+(
+ `api_user_id`          bigint NOT NULL AUTO_INCREMENT ,
+ `user_id`              bigint NOT NULL ,
+ `oauth_uid`            bigint NULL ,
+ `oauth_provider`       varchar(140) NULL ,
+ `username`             varchar(140) NULL ,
+ `oauth_token`          varchar(255) NULL ,
+ `oauth_token_secret`   varchar(255) NULL ,
+ `first_name`           varchar(140) NULL ,
+ `last_name`            varchar(140) NULL ,
+ `user_email`           varchar(140) NULL ,
+ `user_locale`          varchar(140) NULL ,
+ `user_image`           varchar(140) NULL ,
+ `user_link`            varchar(140) NULL ,
+ `user_date_created`    datetime NULL ,
+ `user_date_updated`    datetime NULL ,
+ `user_status`          tinyint NOT NULL DEFAULT 1 ,
 
--- PRIMARY KEY (`api_user_id`)
--- );
+PRIMARY KEY (`api_user_id`)
+);
 
+
+
+-- ***************************************************;
+-- DROP TABLE IF EXISTS `careers`;
+
+-- ************************************** `careers`
+
+
+CREATE TABLE IF NOT EXISTS `careers`
+(
+ `career_id`            bigint NOT NULL AUTO_INCREMENT ,
+ `career_name`          varchar(255) NULL ,
+ `career_location`      varchar(255) NULL ,
+ `career_amount`        varchar(255) NULL ,
+ `career_period_type`   varchar(255) NULL ,
+ `career_description`   TEXT ,
+ `career_closing_date`  datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+ `career_date_created`  datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+ `career_date_updated`  timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+ `career_status`        tinyint NOT NULL DEFAULT 1 ,
+
+PRIMARY KEY (`career_id`)
+);
+
+
+
+-- ***************************************************;
+-- DROP TABLE IF EXISTS `career_applications`;
+
+-- ************************************** `career_applications`
+
+CREATE TABLE IF NOT EXISTS `career_applications`
+(
+ `application_id`             bigint NOT NULL AUTO_INCREMENT ,
+ `career_id`                  bigint NOT NULL ,
+ `application_name`           varchar(255) NULL ,
+ `application_email`          varchar(255) NULL ,
+ `application_contact`        varchar(255) NULL ,
+ `application_file`           varchar(255) NULL ,
+ `application_description`    TEXT ,
+ `application_date_created`   datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+ `application_date_updated`   timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+ `application_status`         tinyint NOT NULL DEFAULT 1 ,
+
+PRIMARY KEY (`application_id`)
+);
 
 -- ***************************************************;
 -- DROP TABLE IF EXISTS `sms_orders`;
@@ -530,7 +593,7 @@ CREATE TABLE IF NOT EXISTS `offices`
 (
  `office_id`         BIGINT NOT NULL AUTO_INCREMENT ,
  `user_id`           bigint NOT NULL ,
- `company_id`        bigint NOT NULL ,
+ `company_id`        bigint NULL ,
  `office_name`       varchar(255) NULL ,
  `office_slug`       varchar(255) NULL ,
  `office_short`      varchar(255) NULL ,

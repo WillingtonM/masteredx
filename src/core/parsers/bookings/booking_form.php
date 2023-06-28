@@ -50,12 +50,12 @@
                 <input type="tel" class="form-control shadow-none" name="booking_phone" value="<?= (isset($event['event_user_phone'])) ? $event['event_user_phone'] : '' ?>" placeholder="Contact number">
             </div>
         </div>
-        <div class="col-12">
+        <!-- <div class="col-12">
             <div class="input-group mb-2">
                 <span class="input-group-text text-warning" style="border-right: none;"><i class="fa fa-building input_color"></i></span>
                 <input type="text" class="form-control shadow-none" name="event_company_name" value="<?= (isset($event['event_company_name'])) ? $event['event_company_name'] : '' ?>" placeholder="Company name">
             </div>
-        </div>
+        </div> -->
     </form>
 
     <hr class="horizontal dark mt-0">

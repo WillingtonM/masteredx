@@ -8,7 +8,7 @@ var token = $('#token').val();
 var post_type = ['action', 'modal'];
 var post_urls = ['accounts', 'messages', 'images', 'files']; // var post_modal = ['login', 'media', 'article', 'academics', 'gallery', 'files', 'imgmodal', 'article_view', 'subscription', 'events', 'users', 'members', 'file_upload', 'service', 'modal_alert',   ]; 
 
-var post_modal = ['login', 'media', 'article', 'academics', 'gallery', 'files', 'imgmodal', 'article_view', 'subscription', 'events', 'users', 'members', 'file_upload', 'service', 'modal_alert', 'notification', 'user_activities', 'registry', 'portal', 'user_types', 'career', 'booking', 'quote', 'practice', 'practice_task', 'company', 'assign', 'profile']; // var post_modal        = ['login','media','article', 'academics', 'gallery', 'files', 'imgmodal', 'article_view'];
+var post_modal = ['login', 'media', 'article', 'academics', 'gallery', 'files', 'imgmodal', 'article_view', 'subscription', 'events', 'users', 'members', 'file_upload', 'service', 'modal_alert', 'notification', 'user_activities', 'registry', 'portal', 'user_types', 'career', 'booking', 'quote', 'practice', 'practice_task', 'company', 'assign', 'profile', 'career',]; // var post_modal        = ['login','media','article', 'academics', 'gallery', 'files', 'imgmodal', 'article_view'];
 
 var path_action = 'action/';
 var path_modal = 'modal/';
@@ -46,16 +46,14 @@ $(document).ready(function () {
   }); // Navbar
   // check cookie
 
-  // var cookie_res = getCookie('email_subscribe');
+  var cookie_res = getCookie('email_subscribe');
 
-  // if (cookie_res != null) {// console.log(document.cookie);
-  // } else {
-  //   setTimeout(function () {
-  //     requestModal(post_modal[8], post_modal[8], {});
-  //   }, 1500);
-  // } 
-  
-  // if ($('#subscription_active').length > 0 && $('#subscription_active').val() == 1 ) {
+  if (cookie_res != null) {// console.log(document.cookie);
+  } else {
+    setTimeout(function () {
+      requestModal(post_modal[8], post_modal[8], {});
+    }, 1500);
+  } // if ($('#subscription_active').length > 0 && $('#subscription_active').val() == 1 ) {
   //   console.log('subscription_active');
   //   var cookie_res = getCookie('email_subscribe');
   //   if (cookie_res != null) {

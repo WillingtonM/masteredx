@@ -23,7 +23,7 @@
     <div class="tab-content col-12" style="padding: 25px 0;">
       <a href="blog-article" class="btn btn-secondary shadow-none border-radius-lg"> Create Article</a>
 
-      <?php foreach ($article_array as $key => $article) : ?>
+      <?php foreach ($article_navba as $key => $article) : ?>
         <?php $array_count++; ?>
         <div class="tab-pane fade <?= (((isset($_GET['tab']) && $_GET['tab'] == $key) || (!isset($_GET['tab']) && $array_count == 1)) ? 'show active' : '') ?>" id="pills-<?= $key ?>" role="tabpanel" aria-labelledby="pills-<?= $key ?>-tab">
           <div class="row">

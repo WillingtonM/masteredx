@@ -3,8 +3,8 @@
 <div class="row">
     <div class="col-12 mt-3">
         <div class="text-center py-3">
-            <h3 class="text-secondary" style="font-weight: bolder;"> Newsletter Subscription </h3>
-            <small class="m-0 alt2_color"> Please subscribe below to receive weekly insight on economic policy. </small>
+            <h3 class="text-secondary" style="font-weight: bolder;"> xFeed Subscription </h3>
+            <small class="m-0 alt2_color"> Please subscribe below to receive articles and insights on education maters. </small>
         </div>
     </div>
     <br>
@@ -20,7 +20,7 @@
 
     <div class="col-12">
         <div class="text-center social_med float-right bg-light p-3 border-radius-xl mb-3">
-            <p class="p-0"> Follow me on social media </p>
+            <p class="p-0"> Follow us on social media </p>
             <?php foreach ($social_media as $key => $social) : ?>
                 <a class="nav-link/" href="<?= $social['link'] ?>" target="_blank"><i style="color: #555 !important;" class="<?= $social['font'] ?> fa-2x"></i></a>
             <?php endforeach; ?>

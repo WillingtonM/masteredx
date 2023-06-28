@@ -55,7 +55,6 @@
                 <div id="" class="">
                     <textarea id="textarea_header" class="form-control" name="" rows="8" cols="100" value="" placeholder="Email header text" style="border-radius: none !important; width:100% !important"><?= ((PAGE_SETTINGS['setting_email_header']) ? PAGE_SETTINGS['setting_email_header'] : '') ?></textarea>
                 </div>
-                <!-- <small class="text-muted col px-3">Email header text</small> -->
             </div>
 
             <input type="hidden" name="form_name" value="article_header">
@@ -82,7 +81,6 @@
             </div>
         </form>
     </div>
-
 
 </div>
 

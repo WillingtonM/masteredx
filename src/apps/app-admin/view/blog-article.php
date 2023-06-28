@@ -88,11 +88,11 @@
         <div class="bg-light p-3 border-radius-lg">
           <div class="col-auto contact_radio mb-3"><br>
             <label for="article_type" class="text-secondary">Article type</label> <br>
-            <?php foreach ($article_array as $key => $article) : ?>
+            <?php foreach ($article_navba as $key => $article) : ?>
               <?php $count++ ?>
               <div class="form-check form-check-inline me-3">
                 <input class="form-check-input me-2" type="radio" name="article_type" id="reasonRadio<?= $count ?>" value="<?= $key ?>" <?= ((($key == 'article' && !isset($req_res['article_type'])) || (isset($req_res['article_type']) && $req_res['article_type'] == $key)) ? 'checked' : '') ?>>
-                <label class="custom-control-label text-muted" for="reasonRadio<?= $count ?>"><?= $article ?></label>
+                <label class="custom-control-label text-muted" for="reasonRadio<?= $count ?>"><?= $article['short'] ?></label>
               </div>
             <?php endforeach; ?>
           </div>

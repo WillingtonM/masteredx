@@ -81,7 +81,7 @@ function get_all_user()
 function get_users () {
   global $sql_request_data;
 
-  $req_sql = "SELECT * FROM users u INNER JOIN user_types ut ON u.user_type_id = ut.user_type_id WHERE u.user_status = 1 AND NOT ut.user_type_slug = 'admin' AND NOT ut.user_type_slug = 'guest' ORDER BY u.user_listpos DESC";
+  $req_sql = "SELECT u.user_id, ut.user_type_id, ut.user_type_slug, u.username, u.email, u.last_name, u.name, u.gender, u.user_position, u.user_description, u.user_listpos, u.contact_number, u.alt_contact_number, u.user_image FROM users u INNER JOIN user_types ut ON u.user_type_id = ut.user_type_id WHERE u.user_status = 1 AND NOT ut.user_type_slug = 'admin' AND NOT ut.user_type_slug = 'guest' ORDER BY u.user_listpos DESC";
   $req_dta = [];
   return ($req_res = prep_exec($req_sql, $req_dta, $sql_request_data[1])) ? $req_res : null;
 }
@@ -194,12 +194,13 @@ function get_article_visits_count($article_id)
 }
 
 
+
 // ****************************************************************************************
 // events 
 
 function get_event_by_date($event_host_date)
 {
-  global $sql_request_data;
+  global $sql_request_data, $email_key;
 
   $req_sql = "SELECT * FROM events WHERE event_host_date = ? LIMIT 1";
   $req_dta = [$event_host_date];
@@ -208,7 +209,7 @@ function get_event_by_date($event_host_date)
 
 function get_event_by_id($event_id)
 {
-  global $sql_request_data;
+  global $sql_request_data, $email_key;
 
   $req_sql = "SELECT * FROM events WHERE event_id = ? LIMIT 1";
   $req_dta = [$event_id];
@@ -217,7 +218,7 @@ function get_event_by_id($event_id)
 
 function get_event_by_email($email)
 {
-  global $sql_request_data;
+  global $sql_request_data, $email_key;
 
   $req_sql = "SELECT * FROM events WHERE event_user_email = ? LIMIT 1";
   $req_dta = [$email];
@@ -251,15 +252,17 @@ function get_events_processed()
   return ($req_res = prep_exec($req_sql, $req_dta, $sql_request_data[1])) ? $req_res : null;
 }
 
-function get_events_unprocessed()
+function get_events_active($active = 2, $type = '')
 {
   global $sql_request_data;
 
-  $req_sql = "SELECT * FROM events WHERE event_processed = 0 ORDER BY event_date_created DESC";
+  $type    = sanitize($type);
+  $typ_sql = (!empty($type)) ? "AND event_type = '" . $type . "'": '';
+  $dte_sql = ($active == 1) ? "AND DATE(event_host_date) >= DATE(NOW()) " : (($active == 0) ? "AND DATE(event_host_date) < DATE(NOW()) ": '');
+  $req_sql = "SELECT * FROM events WHERE event_status = 1 " . $dte_sql . $typ_sql . " ORDER BY event_host_date DESC";
   $req_dta = [];
   return ($req_res = prep_exec($req_sql, $req_dta, $sql_request_data[1])) ? $req_res : null;
 }
-
 
 function get_page_content_by_name($page_content_name)
 {

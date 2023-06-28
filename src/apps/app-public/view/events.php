@@ -1,12 +1,11 @@
 <div class="container pt-10 min-vh-100">
-
-    <div class="page-header min-height-200 mt-4 wait-2s" data-animation="animated pulse" style="border-radius: 35px; z-index: 1 !important">
-        <span class="mask opacity-6/" style="background-color: rgb(0, 0, 0, .3); z-index: 1 !important">
+    <div class="page-header min-height-200 border-radius-xl/ mt-4 wait-2s" data-animation="animated pulse" style="border-radius: 35px;">
+        <span class="mask" style="background-color: rgb(41, 55, 75, .5);">
             <div class="p-0">
                 <div class="text-center py-3 pt-5">
-                    <h3 class="font-weight-bolder text-white"> <span class="text-warning me-2"> Events & Schedule </span> <i> </i> </h3>
+                    <h3 class="font-weight-bolder text-white"> Our <span class="text-warning"> Events </span> & Schedules </h3>
                     <small class="m-0 text-light">
-                        See our upcoming and previous Events & Schedules
+                        See our upcoming and previous Events and Schedules
                     </small>
                 </div>
             </div>

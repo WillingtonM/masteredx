@@ -12,13 +12,13 @@
     <span class="loader"><span class="loader-inner"></span></span>
   </div>
   <?php if (PAGE_SETTINGS['subscription_active']) : ?>
-    <div class="text-center booking-parent btn shadow-none" onclick="requestModal(post_modal[9], post_modal[9], {})">
+    <div class="text-center booking-parent btn shadow-none" onclick="requestModal(post_modal[8], post_modal[8], {})">
       <center>
-        <img src="<?= PROJECT_LOGO ?>" class="text-center" width="53" height="53" loading="lazy" alt="<?= PROJECT_TITLE ?>">
+        <img src="<?= PROJECT_LOGO_SMALL ?>" class="text-center" width="53" height="53" loading="lazy" alt="<?= PROJECT_TITLE ?>">
       </center>
       <div class="col w-100 side_btn_text border-radius-lg p-1">
         <a class="text-center booking-text cursor-pointer">
-          <small class="font-weight-bolder">BOOKINGS</small>
+          <small class="font-weight-bolder">SUBSCRIBE</small>
         </a>
       </div>
     </div>

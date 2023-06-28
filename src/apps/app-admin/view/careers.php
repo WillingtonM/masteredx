@@ -5,7 +5,7 @@
             <div class="card mb-4">
                 <div class="card-header pb-0">
                     <h6> <span> Careers</span>
-                        <a type="button" class="btn btn-dark float-end border-radius-lg" onclick="requestModal(post_modal[16], post_modal[16], {'type':'career'})"> Add Career</a>
+                        <a type="button" class="btn btn-dark float-end border-radius-lg" onclick="requestModal(post_modal[28], post_modal[28], {'type':'career'})"> Add Career</a>
                     </h6>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
@@ -44,7 +44,7 @@
                                                 <span class="badge badge-sm bg-gradient-danger"><?= date('Y-m-d', strtotime($career['career_closing_date'])) ?></span>
                                             </td>
                                             <td class="align-middle">
-                                                <a href="javascript:;" class="text-secondary font-weight-bold text-xs" onclick="requestModal(post_modal[16], post_modal[16], {'career':<?= $career['career_id'] ?>})">
+                                                <a href="javascript:;" class="text-secondary font-weight-bold text-xs" onclick="requestModal(post_modal[28], post_modal[28], {'career':<?= $career['career_id'] ?>})">
                                                     Edit
                                                 </a>
                                             </td>

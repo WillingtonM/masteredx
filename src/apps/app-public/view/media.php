@@ -5,7 +5,7 @@
         <?php $tabbs_count = 0 ?>
         <?php foreach ($media_navba as $key => $nav) : ?>
           <?php $tabbs_count++ ?>
-          <?php if ($key == 'file') { continue; } ?>
+          <?php //if ($key == 'file') { continue; } ?>
           <li class="shadow nav-item font-weight-bold article_nav m-1 <?= (((isset($_GET['tab']) && $_GET['tab'] ==  $key) || (!isset($_GET['tab']) && $tabbs_count == 1)) ? 'article_active' : '') ?>">
             <a get-variable="tab" data-name="<?= $key ?>" class="nav-link <?= (((isset($_GET['tab']) && $_GET['tab'] ==  $key) || (!isset($_GET['tab']) && $tabbs_count == 1)) ? 'active' : '') ?>" id="pills-<?= $key ?>-tab" data-bs-toggle="pill" href="#pills-<?= $key ?>" role="tab" aria-controls="pills-<?= $key ?>" aria-selected="<?= (((isset($_GET['tab']) && $_GET['tab'] == $key)  || empty($_GET['tab'])) ? 'true' : 'false') ?>">
               <span class="border-weight-bolder"> <i class="<?= $nav['imgs'] ?>"> &nbsp; </i> <?= $nav['short'] ?> </span>
@@ -24,7 +24,7 @@
         <?php $array_media_count = 0; ?>
         <?php foreach ($media_navba as $key => $tabs) : ?>
           <?php $array_media_count++; ?>
-          <?php if ($key == 'file') { continue; } ?>
+          <?php //if ($key == 'file') { continue; } ?>
 
           <?php $media = ($key == 'appearance') ? get_media_by_media_type($key) : null ?>
           <div class="tab-pane fade <?= (((isset($_GET['tab']) && $_GET['tab'] == $key) || (!isset($_GET['tab']) && $array_media_count == 1)) ? 'show active' : '') ?>" id="pills-<?= $key ?>" role="tabpanel" aria-labelledby="pills-<?= $key ?>-tab">

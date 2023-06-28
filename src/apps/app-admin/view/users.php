@@ -46,8 +46,9 @@
                                             </div>
                                         </div>
                                     </th>
-                                    <td class="border">
-                                        <a type="button" class="btn btn-dark bg-dark float-end btn-sm/" onclick="requestModal(post_modal[10], post_modal[10],  {'user_id': <?= $usr_id ?>})" <?= ((!$is_admin) ? 'disabled' : '') ?>> <span><i class="fas fa-user-edit me-2"></i> Edit </span> </a>
+                                    <td class="">
+                                        <a type="button" class="btn border-radius-lg bg-dark float-end btn-sm/ me-2 text-white" onclick="requestModal(post_modal[10], post_modal[10],  {'user_id': <?= $usr_id ?>})" <?= ((!$is_admin) ? 'disabled' : '') ?>> <span><i class="fas fa-user-edit me-2"></i> Edit </span> </a>
+                                        <a type="button" href="./userbio?uid=<?= $usr_id ?>" class="btn border-radius-lg btn-white float-end me-2" <?= ((!$is_admin) ? 'disabled' : '') ?>> <span><i class="fas fa-circle-info me-2"></i> Profile </span> </a>
                                     </td>
                                 </tr>
                                 <?php $count++ ?>

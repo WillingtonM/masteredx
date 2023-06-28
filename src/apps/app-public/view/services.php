@@ -1,13 +1,14 @@
    <div id="services_div" class="container pt-10 min-vh-100">
     
        <div class="page-header min-height-300 border-radius-xl/ mt-4 wait-2s" data-animation="animated pulse" style="border-radius: 35px;">
-           <span class="mask opacity-6/" style="background-color: rgb(41, 55, 75, .5); ">
+           <span class="mask" style="background-color: rgb(41, 55, 75, .5);">
                <div class="p-0">
                    <div class="text-center py-3 pt-5">
                        <h3 class="font-weight-bolder text-white"><i class="me-2">Our</i> <span class="text-warning"> Services </span></h3>
                        <small class="m-0 text-light">
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-                           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                           At MasteredX, we are committed to empowering learners with comprehensive and effective educational support services. <br>
+                           We are excited to announce our latest offering, Saturday Subject Learning Classes, Exam Preparation Webinars, Workshops and Online Tutoring, <br>
+                           designed to provide dedicated learning opportunities to help students master their subjects and achieve academic success.
                        </small>
                    </div>
                </div>
@@ -35,11 +36,7 @@
                        </div>
                    </div>
                <?php endforeach; ?>
-
-
            </div>
        </div>
-
-
 
    </div>

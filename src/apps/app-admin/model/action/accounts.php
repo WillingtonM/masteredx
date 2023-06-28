@@ -66,7 +66,7 @@ if(isset($_POST)) {
     $password           = (isset($_POST['password'])) ? $_POST['password'] : '';
     $position           = (isset($_POST['position'])) ? $_POST['position'] : '';
     $province           = (isset($_POST['province'])) ? $_POST['province'] : '';
-    $list_position      = (!isset($_POST['list_position']) && empty($_POST['list_position'])) ? 0 : $_POST['list_position'];
+    $list_position      = (int) (!isset($_POST['list_position']) && empty($_POST['list_position'])) ? 0 : $_POST['list_position'];
     $user_description   = (isset($_POST['description'])) ? $_POST['description'] : '';
 
     $usr_type_qry       = get_user_type_by_id($user_type_id);
@@ -173,18 +173,18 @@ if(isset($_POST)) {
           );
 
           if ($password != '') {
-            $inst_sql     = "UPDATE users SET user_type_id = ?, user_type = ?, username = ?, contact_number = ?, alt_contact_number = ?, name = ?, last_name = ?, email = ?, user_position = ?, user_listpos = ?, user_province = ?, user_description = ?, password = ? WHERE user_id = ? LIMIT 1";
-            $inst_dta     = [$user_type_id, $user_type, $username, $mobile, $telephone, $name, $surname, $email, $position, $list_position, $province, $user_description, $password, $user_id];
+            $inst_sql     = "UPDATE users SET user_type_id = ?, user_type = ?, username = ?, contact_number = ?, alt_contact_number = ?, name = ?, last_name = ?, email = ?, user_position = ?, user_listpos = ?, user_province = ? password = ? WHERE user_id = ? LIMIT 1";
+            $inst_dta     = [$user_type_id, $user_type, $username, $mobile, $telephone, $name, $surname, $email, $position, $list_position, $province, $password, $user_id];
           } else {
-            $inst_sql     = "UPDATE users SET user_type_id = ?, user_type = ?, username = ?, contact_number = ?, alt_contact_number = ?, name = ?, last_name = ?, email = ?, user_position = ?, user_listpos = ?, user_province = ?, user_description = ? WHERE user_id = ? LIMIT 1";
-            $inst_dta     = [$user_type_id, $user_type, $username, $mobile, $telephone, $name, $surname, $email, $position, $list_position, $province, $user_description, $user_id];
+            $inst_sql     = "UPDATE users SET user_type_id = ?, user_type = ?, username = ?, contact_number = ?, alt_contact_number = ?, name = ?, last_name = ?, email = ?, user_position = ?, user_listpos = ?, user_province = ? WHERE user_id = ? LIMIT 1";
+            $inst_dta     = [$user_type_id, $user_type, $username, $mobile, $telephone, $name, $surname, $email, $position, $list_position, $province, $user_id];
           }
         } else {
           $key_dta        = 'insert';
           $msg_dta        = 'insert';
           $password       = password_hashing($password);
-          $inst_sql       = "INSERT INTO users (company_id, office_id, user_type_id, user_type, username, contact_number, alt_contact_number, name, last_name, email, password, user_position, user_listpos, user_province, user_description, date_created, last_seen) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-          $inst_dta       = [$company_id, $office_id, $user_type_id, $user_type, $username, $mobile, $telephone, $name, $surname, $email, $password, $position, $list_position, $province, $user_description, $date, $date];
+          $inst_sql       = "INSERT INTO users (company_id, office_id, user_type_id, user_type, username, contact_number, alt_contact_number, name, last_name, email, password, user_position, user_listpos, user_province, date_created, last_seen) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+          $inst_dta       = [$company_id, $office_id, $user_type_id, $user_type, $username, $mobile, $telephone, $name, $surname, $email, $password, $position, $list_position, $province, $date, $date];
         }
 
         if (prep_exec($inst_sql, $inst_dta, $sql_request_data[2])) {
@@ -208,6 +208,36 @@ if(isset($_POST)) {
 
       $data['data'] = '';
     }
+  }
+
+  // user profile
+  if (isset($_POST['form_name']) && $_POST['form_name'] == 'user_profile' && isset($_POST['article_content'])) {
+    $profile  = $_POST['article_content'];
+    $user     = (isset($_POST['user'])) ? $_POST['user'] : '';
+
+    if (!get_user_by_id($user)) {
+      $data['error']    = true;
+      $data['message']  = "User cannot be found";      
+    }
+
+    if (empty($profile)) {
+      $data['error']    = true;
+      $data['message']  = "User profile is empty, please write something";
+    }
+
+    if (!$data['error']) {
+      $sql = "UPDATE users SET user_description = ? WHERE user_id = ? LIMIT 1";
+      $dta = [$profile, $user];
+
+      if (prep_exec($sql, $dta, $sql_request_data[2])) {
+        $data['success']  = true;
+        $data['message']  = "User profile has been updated";
+      } else {
+        $data['error']    = true;
+        $data['message']  = "Something went wrong, please try again";
+      }
+    }
+  
   }
 
   // user login
@@ -271,8 +301,6 @@ if(isset($_POST)) {
     $pub_mob           = (isset($_POST['publication_month'])) ? $_POST['publication_month'] : '';
     $pub_yob           = (isset($_POST['publication_year'])) ? $_POST['publication_year'] : '';
     $article_pubdate   = (!empty($pub_dob) && !empty($pub_mob) && !empty($pub_yob)) ? date("Y-m-d H:i:s", strtotime($pub_yob . '/' . $pub_mob . '/' . $pub_dob)) : '';
-
-
 
     $article_file      = ((isset($_POST['file_name'])) ? $_POST['file_name'] : '');
 

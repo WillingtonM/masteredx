@@ -7,10 +7,11 @@ $project_status     = array('production' => true, 'development' => true, 'stagin
 $question_types     = array('radio', 'text', 'full_text');
 $image_modify_paths = array('', 'square', 'rect');
 $media_types        = array('video');
-$article_types      = array('articles', 'blog');
+$article_types      = array('article', 'blog');
 $article_array_new  = array('articles' => 'Articles & Columns');
 $media_array        = array('appearance' => 'Media Appearances', 'gallery' => 'Gallery', 'file' => 'Files');
 $article_array      = array('civil_matters' => 'Civil Matters', 'labour_matters' => 'Labour Matters', 'criminal_matters' => "Criminal Matters", 'estate_planning' => 'Estate Planning', 'wills_trust' => 'Wills and Trusts');
+$career_types       = array('full_time' => 'Full Time', 'part_time' => 'Part Time', 'temporary' => 'Temporary');
 
 $admin_emails = array(
   'admin' => array(
@@ -74,15 +75,15 @@ $admin_pages = array(
   //   'link'  => 'articles?tab=article',
   //   'anim'  => 'zoomInUp'
   // ),
-  // 'events' => array(
-  //   'short' => 'Events',
-  //   'long'  => 'Manage Events',
-  //   'imgs'  => 'fab fa-calendar',
-  //   // 'imgs'  => 'publications.png',
-  //   'type'  => 'img',
-  //   'link'  => 'articles?tab=article',
-  //   'anim'  => 'zoomInUp'
-  // ),
+  'events' => array(
+    'short' => 'Events',
+    'long'  => 'Manage Events',
+    'imgs'  => 'fab fa-calendar',
+    // 'imgs'  => 'publications.png',
+    'type'  => 'img',
+    'link'  => 'articles?tab=article',
+    'anim'  => 'zoomInUp'
+  ),
   'bookings' => array(
     'short' => 'Bookings',
     'long'  => 'Manage Bookings',
@@ -101,51 +102,24 @@ $admin_pages = array(
     'link'  => 'media',
     'anim'  => 'zoomInRight'
   ),
-  // 'pages' => array(
-  //   'short' => 'Pages',
-  //   'long'  => 'Manage Pages ',
-  //   'imgs'  => 'fas fa-edit',
-  //   // 'imgs'  => 'blog.png',
-  //   'type'  => 'img',
-  //   'link'  => 'pages',
-  //   'anim'  => 'zoomInRight'
-  // ),
-  // 'clients' => array(
-  //   'short' => 'Executors',
-  //   'long'  => 'Applicants | Executors',
-  //   'imgs'  => 'fa-solid fa-users',
-  //   // 'imgs'  => 'blog.png',
-  //   'type'  => 'img',
-  //   'link'  => 'clients',
-  //   'anim'  => 'zoomInRight'
-  // ),
-  // 'estates' => array(
-  //   'short' => 'Estates',
-  //   'long'  => 'Deceased Estates',
-  //   'imgs'  => 'fa-solid fa-users',
-  //   // 'imgs'  => 'blog.png',
-  //   'type'  => 'img',
-  //   'link'  => 'estates',
-  //   'anim'  => 'zoomInRight'
-  // ),
-  // 'activities' => array(
-  //   'short' => 'Activities',
-  //   'long'  => 'User Activities',
-  //   'imgs'  => 'fa-solid fa-chart-line',
-  //   // 'imgs'  => 'blog.png',
-  //   'type'  => 'img',
-  //   'link'  => 'activities',
-  //   'anim'  => 'zoomInRight'
-  // ),
-  // 'registry' => array(
-  //   'short' => 'Registry',
-  //   'long'  => 'Registry Activities',
-  //   'imgs'  => 'fa-solid fa-clipboard',
-  //   // 'imgs'  => 'blog.png',
-  //   'type'  => 'img',
-  //   'link'  => 'registry',
-  //   'anim'  => 'zoomInRight'
-  // ),
+  'careers' => array(
+    'short' => 'Careers',
+    'long'  => 'Manage Careers ',
+    'imgs'  => 'fa-solid fa-briefcase',
+    // 'imgs'  => 'blog.png',
+    'type'  => 'img',
+    'link'  => 'careers',
+    'anim'  => 'zoomInRight'
+  ),
+  'vacancies' => array(
+    'short' => 'Vacancies',
+    'long'  => 'Vacancies ',
+    'imgs'  => 'fa-solid fa-briefcase',
+    // 'imgs'  => 'blog.png',
+    'type'  => 'img',
+    'link'  => 'vacancies',
+    'anim'  => 'zoomInRight'
+  ),
   'settings' => array(
     'short' => 'Settings',
     'long'  => 'Page Settings ',
@@ -169,19 +143,19 @@ $admin_pages = array(
 
 $article_navba      = array(
   'article' => array(
-    'short' => 'Authored publications',
-    'long'  => 'Published articles and research blogs',
+    'short' => 'Newsfeed',
+    'long'  => 'Published articles and research articles',
     'imgs'  => 'fab fa-leanpub',
     'type'  => 'font',
     'anim'  => 'zoomInUp'
   ),
-  'blog' => array(
-    'short' => 'Blog',
-    'long'  => 'Weekly articles and insights',
-    'imgs'  => 'fas fa-blog',
-    'type'  => 'font',
-    'anim'  => 'zoomInLeft'
-  )
+  // 'blog' => array(
+  //   'short' => 'Blog',
+  //   'long'  => 'Article, blogs and insights',
+  //   'imgs'  => 'fas fa-blog',
+  //   'type'  => 'font',
+  //   'anim'  => 'zoomInLeft'
+  // )
 );
 
 $user_activities    = array(
@@ -368,15 +342,15 @@ $pages_nav      = array(
 
 $media_navba      = array(
   'appearance' => array(
-    'short' => 'Media Appearance',
-    'long'  => 'Published podcast & TV Appearances',
+    'short' => 'Videos',
+    'long'  => 'Videos, Podcast & TV Appearances',
     'imgs'  => 'fas fa-podcast',
     'type'  => 'font',
     'anim'  => 'zoomInUp'
   ),
   'gallery' => array(
-    'short' => 'Gallery',
-    'long'  => 'Media Gallery',
+    'short' => 'Media Gallery',
+    'long'  => 'Events & Media Gallery ',
     'imgs'  => 'fas fa-camera-retro',
     'type'  => 'font',
     'anim'  => 'zoomInLeft'
@@ -388,6 +362,82 @@ $media_navba      = array(
     'type'  => 'font',
     'anim'  => 'zoomInLeft'
   ),
+);
+
+$events_navba      = array(
+  'upcoming' => array(
+    'short' => 'Upcoming Events',
+    'long'  => 'Upcoming Events',
+    'imgs'  => 'fa-solid fa-calendar-days',
+    'type'  => 'font',
+    'anim'  => 'zoomInUp'
+  ),
+  'previous' => array(
+    'short' => 'Previous Events',
+    'long'  => 'Previous Events',
+    'imgs'  => 'fa-solid fa-clock-rotate-left',
+    'type'  => 'font',
+    'anim'  => 'zoomInUp'
+  ),
+);
+
+$resources_navba  = array(
+  // 'registration' => array(
+  //   'short' => 'Registration Docs',
+  //   'long'  => 'Registration Docs',
+  //   'imgs'  => 'fa-regular fa-file',
+  //   'type'  => 'font',
+  //   'anim'  => 'pulse',
+  //   'wait'  => '1',
+  // ),
+  
+  
+  // 'articles' => array(
+  //   'short' => 'News Articles',
+  //   'long'  => 'News Articles & Blog',
+  //   'imgs'  => 'fa-solid fa-newspaper',
+  //   'type'  => 'font',
+  //   'anim'  => 'pulse',
+  //   'wait'  => '1',
+  // ),
+  'careers' => array(
+    'short' => 'Careers',
+    'long'  => 'Careers',
+    'imgs'  => 'fa-solid fa-briefcase',
+    'type'  => 'font',
+    'anim'  => 'pulse',
+    'link'  => 'careers',
+    'wait'  => '1',
+  ),
+  'files' => array(
+    'short' => 'Files',
+    'long'  => 'Files',
+    'imgs'  => 'fa-solid fa-folder',
+    'type'  => 'font',
+    'anim'  => 'pulse',
+    'link'  => 'media?tab=file',
+    'wait'  => '1',
+  ),
+  'events' => array(
+    'short' => 'Events & Schedules',
+    'long'  => 'Events & Schedules',
+    'imgs'  => 'fa-solid fa-calendar-days',
+    'type'  => 'font',
+    'anim'  => 'pulse',
+    'link'  => 'events',
+    'wait'  => '1',
+  ),
+  'media' => array(
+    'short' => 'Media Gallery',
+    'long'  => 'Podcasts, Media Gallery',
+    'imgs'  => 'fa-solid fa-photo-film',
+    'type'  => 'font',
+    'anim'  => 'pulse',
+    'link'  => 'media?tab=gallery',
+    'wait'  => '1',
+  ),
+  
+  
 );
 
 $articles_nav      = array(
@@ -481,9 +531,9 @@ function service_cnt()
 
 $home_array         = array(
   'about' => array(
-    'short' => 'Customized learning',
+    'short' => 'About us',
     'long'  => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    'font'  => 'fa-solid fa-address-book',
+    'font'  => 'fa-solid fa-info-circle',
     'imgs'  => 'user_profile.png',
     'type'  => 'img',
     'link'  => 'services',
@@ -491,9 +541,9 @@ $home_array         = array(
     'wait'  => '1',
   ),
   'services' => array(
-    'short' => 'Holistic approach',
+    'short' => 'Our Services',
     'long'  => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    'font'  => 'fa-solid fa-bullseye',
+    'font'  => 'fa-solid fa-building',
     'imgs'  => 'publications.png',
     'type'  => 'img',
     'link'  => 'services',
@@ -501,9 +551,9 @@ $home_array         = array(
     'wait'  => '2',
   ),
   'contact' => array(
-    'short' => 'Affordable rates',
+    'short' => 'Contact Us',
     'long'  => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    'font'  => 'fa-solid fa-dollar',
+    'font'  => 'fa-solid fa-address-book',
     'imgs'  => 'blog.png',
     'type'  => 'img',
     'link'  => 'services',
@@ -516,7 +566,7 @@ $home_array         = array(
 $about_navba = array(
   'background' => array(
     'short' => 'Our background',
-    'long'  => '',
+    'long'  => 'Our background',
     'font'  => 'fa-solid fa-hourglass-half',
     'imgs'  => 'user_profile.png',
     'type'  => 'img',
@@ -524,9 +574,9 @@ $about_navba = array(
     'anim'  => 'swing',
     'wait'  => '1',
   ),
-  'promise' => array(
-    'short' => 'Our service offerings',
-    'long'  => '',
+  'mission' => array(
+    'short' => 'Our vission & mission',
+    'long'  => 'Vission and Mission Statement',
     'font'  => 'fa-solid fa-briefcase',
     'imgs'  => 'publications.png',
     'type'  => 'img',
@@ -534,9 +584,9 @@ $about_navba = array(
     'anim'  => 'tada',
     'wait'  => '2',
   ),
-  'testimonials' => array(
-    'short' => 'Testimonials', 
-    'long'  => '',
+  'values' => array(
+    'short' => 'Our Values', 
+    'long'  => 'Our company values',
     'font'  => 'fa-solid fa-comments',
     'imgs'  => 'blog.png',
     'type'  => 'img',
@@ -723,37 +773,36 @@ $booking_types = array(
     'type' => 'font',
     'anim' => 'zoomInLeft'
   ),
-
 );
 
 $services_navba      = array(
-  'commercial' => array(
-    'short' => 'Service 1',
-    'long'  => 'Lorem ipsum dolor <br> consectetur adipiscing',
+  'saturday' => array(
+    'short' => 'Saturday School',
+    'long'  => 'Saturday School',
     'imgs'  => 'fa-solid fa-building',
     'type'  => 'font',
     'anim'  => 'pulse',
     'wait'  => '1',
   ),
-  'laundry' => array(
-    'short' => 'Service 2',
-    'long'  => 'Lorem ipsum dolor <br> consectetur adipiscing',
+  'webinars' => array(
+    'short' => 'Webinars',
+    'long'  => 'Exam Preparation Webinars',
     'imgs'  => 'fa-solid fa-building',
     'type'  => 'font',
     'anim'  => 'pulse',
     'wait'  => '1',
   ),
-  'residential' => array(
-    'short' => 'Service 3',
-    'long'  => 'Lorem ipsum dolor <br> consectetur adipiscing',
+  'workshop' => array(
+    'short' => 'Workshops',
+    'long'  => 'Workshop services',
     'imgs'  => 'fa-solid fa-building',
     'type'  => 'font',
     'anim'  => 'pulse',
     'wait'  => '1',
   ),
-  'others'  => array(
-    'short' => 'Service 4',
-    'long'  => 'Lorem ipsum dolor <br> consectetur adipiscing',
+  'tutoring'  => array(
+    'short' => 'Online Tutoring',
+    'long'  => 'Online Tutoring',
     'imgs'  => 'fa-solid fa-building',
     'type'  => 'font',
     'anim'  => 'pulse',
@@ -860,16 +909,16 @@ $company_types      = array(
 $social_media = array(
   'facebook'  => array(
     'name' => 'facebook',
-    'user' => 'https://web.facebook.com/profile.php?id=100091925892677',
+    'user' => 'MasteredX',
     'font' => 'fab fa-facebook',
     'link' => 'https://web.facebook.com/profile.php?id=100091925892677',
     'lnk2' => 'https://' . $_ENV['PROJECT_HOST'] . '/img/other/facebook.png',
   ),
   'instagram'  => array(
     'name' => 'instagram',
-    'user' => 'https://www.instagram.com/mastered_x/',
+    'user' => 'mastered_x',
     'font' => 'fab fa-instagram',
-    'link' => '',
+    'link' => 'https://www.instagram.com/mastered_x/',
     'lnk2' => 'https://'.$_ENV['PROJECT_HOST'] . '/img/other/instagram.png',
   ),
   // 'linkedin'  => array(
@@ -887,14 +936,14 @@ $social_media = array(
   // ),
   'tiktok'   => array(
     'name' => 'tiktok',
-    'user' => 'https://www.tiktok.com/@mastered_x_',
+    'user' => '@mastered_x_',
     'font' => 'fa-brands fa-tiktok',
-    'link' => '',
+    'link' => 'https://www.tiktok.com/@mastered_x_',
     'lnk2' => 'https://' . $_ENV['PROJECT_HOST'] . '/img/other/tiktok.png',
   ),
   'whatsapp'   => array(
     'name' => 'whatsapp',
-    'user' => '',
+    'user' => 'MasteredX',
     'font' => 'fab fa-whatsapp',
     'link' => 'https://api.whatsapp.com/send?phone=27765060938',
     'lnk2' => 'https://' . $_ENV['PROJECT_HOST'] . '/img/other/twitter.png',

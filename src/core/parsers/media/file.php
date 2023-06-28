@@ -1,6 +1,9 @@
+<?php if (isset($_SESSION['admin_id'])) : ?>
+    <div class="col-12 pt-3/ px-1">
+        <a type="button" class="btn btn-dark border-radius-lg" onclick="requestModal(post_modal[12], 'fileModal', {})"> Upload File </a>
+    </div>
+<?php endif; ?>
 <div class="col-12">
-    <a type="button" class="btn btn-dark border-radius-lg" onclick="requestModal(post_modal[12], 'fileModal', {})"> Upload File </a>
-
     <div class="row">
 
         <?php 
