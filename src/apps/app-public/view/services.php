@@ -19,10 +19,10 @@
            <div class="row">
                <?php foreach ($services_navba as $nav_key => $nav_val) : ?>
                    <div id="service_<?= $nav_key ?>" class="col-12 col-sm-6 col-md-3 p-2 h-200 hover_inimate">
-                       <div class="card card-blog card-plain/ bg-white text-center wait-<?= $nav_val['wait'] ?>s" data-animation="animated <?= $nav_val['anim'] ?>" style="border-radius: 35px 35px 20px 20px;">
+                       <div class="card card-blog bg-white text-center wait-<?= $nav_val['wait'] ?>s" data-animation="animated <?= $nav_val['anim'] ?>" style="border-radius: 35px 35px 20px 20px;">
                            <div class="position-relative">
-                               <a class="d-block shadow-xl/ border-radius-xl/">
-                                   <img src="./img/services/<?= $nav_key ?>.jpg" alt="img-blur-shadow" class="img-fluid shadow/ border-radius-xl/" style="border-radius: 35px 35px 0 0; ">
+                               <a class="d-block">
+                                   <img src="./img/services/<?= $nav_key ?>.jpg" alt="<?= $nav_val['short'] ?>" class="img-fluid" style="border-radius: 35px 35px 0 0; ">
                                </a>
                            </div>
                            <div class="card-body p-3">

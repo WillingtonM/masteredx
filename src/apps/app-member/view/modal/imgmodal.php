@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body" style="padding: 0px 15px;">
         <div class="row">
-          <img src="<?=$image_dir ?>" alt="Isaah Mhlanga" style="width: 100%;">
+          <img src="<?=$image_dir ?>" alt="<?= PROJECT_TITLE ?>" style="width: 100%;">
         </div>
       </div>
     </div>

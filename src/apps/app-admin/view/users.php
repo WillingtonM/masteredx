@@ -37,7 +37,7 @@
                                     <th scope="row border">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="<?= $image ?>" width="45" alt="...">
+                                                <img src="<?= $image ?>" width="45" alt="user image">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <b><?= $ful_name ?></b> <br>

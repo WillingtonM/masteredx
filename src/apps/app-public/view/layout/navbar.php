@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
               <ul class="navbar-nav mx-auto/ justify-content-end">
                 <li class="nav-item">
-                  <a class=""> &nbsp;  </a>
+                  <a class=""> &nbsp; </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link nav_text def_text <?= ((isset($page) && $page == "about") ? 'active nav_text_left' : '') ?>" href="about"><i class="fa-solid fa-circle-info me-1"></i> About</a>
@@ -48,7 +48,10 @@
                 <li class="nav-item">
                   <a class="nav-link nav_text def_text <?= ((isset($page) && $page == "articles") ? 'active nav_text_left' : '') ?>" href="articles"><i class="fa-solid fa-newspaper me-1"></i> xFeed </a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                  <a class="nav-link nav_text def_text <?= ((isset($page) && $page == "services") ? 'active nav_text_left' : '') ?>" href="services"><i class="fa-solid fa-building me-1"></i> Services </a>
+                </li>
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link nav_text def_text dropdown-toggle <?= ((isset($page) && $page == "services") ? 'active nav_text_left' : '') ?>" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-building me-1"></i> Services
                   </a>
@@ -108,7 +111,7 @@
                     </div>
                   </div>
 
-                </li>
+                </li> -->
                 <!-- <li class="nav-item dropdown">
                   <a class="nav-link font-weight-bolder dropdown-toggle <?= ((isset($page) && $page == "media") ? 'active nav_text_left' : '') ?>" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-camera-retro me-1"></i> Media

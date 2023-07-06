@@ -13,7 +13,7 @@
   <?php $head_title = (isset($project_apps[$_SESSION['active_app']]['slog']) && !empty($project_apps[$_SESSION['active_app']]['slog'])) ? $project_apps[$_SESSION['active_app']]['slog'] : $_ENV['PROJECT_SLOG']; ?>
   <title><?= ($page == 'article' && isset($req_res)) ? $req_res['article_title'] : strtoupper($page) . ' | ' . PROJECT_TITLE . ' - ' . $head_title ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <meta name="description" content="<?= PROJECT_TITLE . ' | ' . $_ENV['PROJECT_DSCPT_SHORT'] ?>">
+  <meta name="description" content="<?= $_ENV['PROJECT_DSCPT_SHORT'] ?>">
   <meta name="keywords" content="<?= $_ENV['PROJECT_DSCPT'] ?>">
   <meta name="note" content="">
   <meta name="subject" content="">
@@ -42,14 +42,14 @@
   <meta name="twitter:creator" content="<?= (isset($social_media['twitter']['user'])) ? $social_media['twitter']['user'] : '' ?>">
   <meta name="twitter:domain" content="<?= host_url($_SERVER['REQUEST_URI']) ?>">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="<?= ($page == 'article' && isset($req_res)) ? host_url(DS . article_img($req_res['article_type'], $req_res['article_image'])) : PROJECT_LOGO ?>">
+  <meta name="twitter:image" content="<?= ($page == 'article' && isset($req_res)) ? host_url(DS . article_img($req_res['article_type'], $req_res['article_image'])) : PROJECT_LOGO_SMALL ?>">
   <meta name="twitter:image:alt" content="<?= ($page == 'article' && isset($req_res)) ? $req_res['article_title'] : '' ?>">
 
   <meta property="og:locale" content="{'locale':'en_us'}" />
   <meta property="og:type" content="<?= ($page == 'article' || $page == 'articles') ? 'article' : 'website' ?>">
   <meta property="og:title" content="<?= ($page == 'article' && isset($req_res)) ? $req_res['article_title'] : strtoupper($page) . ' | ' . PROJECT_TITLE ?>">
   <meta property="og:description" content="<?= PROJECT_TITLE . ' | ' . $_ENV['PROJECT_DSCPT_SHORT'] ?>">
-  <meta property="og:image" content="<?= ($page == 'article' && isset($req_res)) ? host_url(DS . article_img($req_res['article_type'], $req_res['article_image'])) : PROJECT_LOGO ?>">
+  <meta property="og:image" content="<?= ($page == 'article' && isset($req_res)) ? host_url(DS . article_img($req_res['article_type'], $req_res['article_image'])) : PROJECT_LOGO_SMALL ?>">
   <meta property="og:image:alt" content="<?= ($page == 'article' && isset($req_res)) ? $req_res['article_title'] : strtoupper($page) . ' | ' . PROJECT_TITLE ?>" />
   <meta property="og:url" content="<?= host_url($_SERVER['REQUEST_URI']) ?>">
   <meta property="og:site_name" content="<?= PROJECT_TITLE ?>">

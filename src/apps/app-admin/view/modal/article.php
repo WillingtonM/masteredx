@@ -11,7 +11,7 @@
       <?php if ($article_id) : ?>
         <br>
         <div class="col-sm-12 text-center" style="width: 300px;">
-          <img class="img-thumbnail img-responsive" src="./img/articles/<?= $req_res['article_type'] . DS . $req_res['article_image'] ?>" alt="<?= $req_res['article_title'] ?>" height="120px">
+          <img class="img-thumbnail img-responsive" src="./img/articles/<?= $req_res['article_type'] . DS . $req_res['article_image'] ?>" alt="<?= $req_res['article_title'] ?>" height="120px" alt="<?= ((isset($req_res['article_title'])) ? $req_res['article_title'] : '') ?>">
         </div>&nbsp;
       <?php endif; ?>
       <div class="col-sm-12 text-center">

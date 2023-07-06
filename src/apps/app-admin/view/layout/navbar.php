@@ -16,7 +16,6 @@
 
                 <li class="breadcrumb-item text-sm"> &emsp;
                     <a href="./" class="navbar-brand">
-                        <!-- <img src="<?= PROJECT_LOGO ?>" width="30" height="30" class="d-inline-block/ align-top" alt=""> -->
                         <span id="trln_text" class="" style="font-size: 1.2rem;"> <?= PROJECT_TITLE ?> <small style="font-size: .5em;"> <i style="color: #cc0055 !important;">Admin</i> </small> </span>
                     </a>
                 </li> 

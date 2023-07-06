@@ -7,7 +7,7 @@
         <div class="col py-0 px-3">
             <div class="col shadow border-radius-md text-center p-1">
                 <a href="./" class="border-radius-md/">
-                    <img src="<?= PROJECT_LOGO_SMALL ?>" class="border-radius-md" alt="main_logo" style="width: 70px; height: 70px !important; border-radius: 50%; padding: 1px;">
+                    <img src="<?= PROJECT_LOGO_SMALL ?>" class="border-radius-md" alt="<?= PROJECT_TITLE ?> logo" style="width: 70px; height: 70px !important; border-radius: 50%; padding: 1px;">
                 </a>
             </div>
         </div>

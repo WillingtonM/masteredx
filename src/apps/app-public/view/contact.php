@@ -33,7 +33,7 @@
                                 <h6 class="">Ready to take your learning to the next level? <br> Contact us today to find out how MasteredX can support your educational journey.</h6>
                                 <a class="p-2" style="font-size: .8rem" href="mailto:info@<?= $_ENV['PROJECT_HOST'] ?>"> <i class="fa-solid fa-envelope me-1"></i> <?= $contact_tabs['client']['mail'] ?> </a>
                                 <br>
-                                <a class="p-2" style="font-size: .8rem" href="<?= str_replace(' ', '', $contact_tabs['client']['call']) ?>"> <i class="fa-solid fa-phone me-1"></i> <?= $contact_tabs['client']['call'] ?> </a>
+                                <!-- <a class="p-2" style="font-size: .8rem" href="<?= str_replace(' ', '', $contact_tabs['client']['call']) ?>"> <i class="fa-solid fa-phone me-1"></i> <?= $contact_tabs['client']['call'] ?> </a> -->
                             </p>
                         </div>
                         <div id="message_booking_con" class=""></div>

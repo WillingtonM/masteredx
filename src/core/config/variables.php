@@ -18,14 +18,10 @@ $admin_emails = array(
     'name'  => $_ENV['MAIL_USER'],
     'mail'  => $_ENV['MAIL_MAIL'],
   ),
-  // 'snattorneys' => array(
-  //   'name'  => PROJECT_TITLE,
-  //   'mail'  => 'info@'.$_ENV['PROJECT_HOST'],
-  // ),
-  // 'will' => array(
-  //   'name'  => 'Willington Mhlanga',
-  //   'mail'  => 'willington.mhlanga@gmail.com',
-  // ),
+  'will' => array(
+    'name'  => 'Willington Mhlanga',
+    'mail'  => 'willington.mhlanga@gmail.com',
+  ),
 );
 
 
@@ -78,10 +74,10 @@ $admin_pages = array(
   'events' => array(
     'short' => 'Events',
     'long'  => 'Manage Events',
-    'imgs'  => 'fab fa-calendar',
+    'imgs'  => 'fa-solid fa-calendar-days',
     // 'imgs'  => 'publications.png',
     'type'  => 'img',
-    'link'  => 'articles?tab=article',
+    'link'  => 'events',
     'anim'  => 'zoomInUp'
   ),
   'bookings' => array(
@@ -600,60 +596,18 @@ $about_navba = array(
 // contact tabs
 $contact_tabs         = array(
   'client' => array(
-    'short' => 'Client Inquiries',
+    'short' => 'Inquiries',
     'long'  => '',
     'font'  => 'fa-solid fa-circle-info',
     'imgs'  => '/icons/articles-white.png',
     'type'  => 'img',
     'link'  => '',
-    'call'  => '+27 00 000 0000',
-    'wapp'  => '27 00 000 0000',
+    'call'  => '+27 76 506 0938',
+    'wapp'  => '27 76 506 0938',
     'mail'  => 'info@'.$_ENV['PROJECT_HOST'],
     'site'  => $_ENV['PROJECT_HOST'],
     'anim'  => 'slideInUp',
     'wait'  => '1',
-  ),
-  'media' => array(
-    'short' => 'Media Inquiries',
-    'long'  => '',
-    'font'  => 'fa-solid fa-newspaper',
-    'imgs'  => '/icons/media-white.png',
-    'type'  => 'img',
-    'link'  => '',
-    'call'  => '+27 21 879 3035',
-    'wapp'  => '27 21 879 3035',
-    'mail'  => 'media@'.$_ENV['PROJECT_HOST'],
-    'site'  => $_ENV['PROJECT_HOST'],
-    'anim'  => 'slideInUp',
-    'wait'  => '2',
-  ), 
-  'business' => array(
-    'short' => 'Business Related',
-    'long'  => '',
-    'font'  => 'fa-solid fa-address-book',
-    'imgs'  => '/icons/newsletter-white.png',
-    'type'  => 'img',
-    'link'  => '',
-    'call'  => '+27 21 879 3035',
-    'wapp'  => '27 21 879 3035',
-    'mail'  => 'business@'.$_ENV['PROJECT_HOST'],
-    'site'  => $_ENV['PROJECT_HOST'],
-    'anim'  => 'slideInUp',
-    'wait'  => '3',
-  ),
-  'recruitment' => array(
-    'short' => 'Recruitment Related',
-    'long'  => '',
-    'font'  => 'fa-solid fa-briefcase',
-    'imgs'  => '/icons/newsletter-white.png',
-    'type'  => 'img',
-    'link'  => '',
-    'call'  => '+27 21 879 3035',
-    'wapp'  => '27 21 879 3035',
-    'mail'  => 'jobs@'.$_ENV['PROJECT_HOST'],
-    'site'  => $_ENV['PROJECT_HOST'],
-    'anim'  => 'slideInUp',
-    'wait'  => '4',
   ),
 );
 

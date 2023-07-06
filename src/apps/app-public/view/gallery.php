@@ -4,14 +4,10 @@
 
         <?php if ($data['error']) : ?>
             <div class="col-12 shadow bg-white border-radius-xl text-center p-3">
-
-                <p class="text-danger"> <?= $data['message'] ?> </p>
-
-                <br>
+                <p class="text-danger"> <?= $data['message'] ?> </p> <br>
                 <p>
                     <a href="media?tab=?gallery" class="btn btn-secondary border-radius-lg"> Go back to Gallery </a>
                 </p>
-
             </div>
         <?php else : ?>
             <div class="col-12 px-3 pt-3 bg-white border-radius-xl shadow p-3 ">
@@ -30,7 +26,6 @@
                         </p>
                         <p class="font-weight-bold text-dark text-sm"><?= $value['media_content'] ?></p>
                     <?php endif; ?>
-
                 </div>
                 <div class="col-12 mb-4">
                     <div class="row">
@@ -39,10 +34,5 @@
                 </div>
             </div>
         <?php endif; ?>
-
-
-
-
     </div>
-
 </div>

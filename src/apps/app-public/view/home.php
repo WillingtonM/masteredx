@@ -12,11 +12,9 @@
             </div>
 
             <div class="container text-center">
-        
               <div class="page-header min-height-300 border-radius-xl/ mt-4  wait-1s" data-animation="animated slideInDown" style="border-radius: 35px;">
                 <?php require $config['PARSERS_PATH'] . 'home' . DS . 'card_head.php' ?>
               </div>
-
               <div class="mx-4 mt-n6 text-center">
                 <div class="row">
                   <?php foreach ($home_array as $home_key => $home_val) : ?>
@@ -24,9 +22,7 @@
                   <?php endforeach; ?>
                 </div>
               </div>
-              
             </div>
-
           </div>
         </div>
       </div>
@@ -41,11 +37,9 @@
             </div>
         
             <div class="container text-center">
-        
               <div class="page-header min-height-300 border-radius-xl/ mt-4  wait-1s" data-animation="animated slideInDown" style="border-radius: 35px;">
                 <?php require $config['PARSERS_PATH'] . 'home' . DS . 'card_head.php' ?>
               </div>
-
               <div class="mx-4 mt-n6 text-center">
                 <div class="row">
                   <?php foreach ($home_array as $home_key => $home_val) : ?>
@@ -53,9 +47,7 @@
                   <?php endforeach; ?>
                 </div>
               </div>
-              
             </div>
-        
           </div>
         </div>
       </div>
@@ -71,11 +63,9 @@
             </div>
         
             <div class="container text-center">
-        
               <div class="page-header min-height-300 border-radius-xl/ mt-4  wait-1s" data-animation="animated slideInDown" style="border-radius: 35px;">
                 <?php require $config['PARSERS_PATH'] . 'home' . DS . 'card_head.php' ?>
               </div>
-
               <div class="mx-4 mt-n6 text-center">
                 <div class="row">
                   <?php foreach ($home_array as $home_key => $home_val) : ?>
@@ -83,9 +73,7 @@
                   <?php endforeach; ?>
                 </div>
               </div>
-              
             </div>
-        
           </div>
         </div>
       </div>
@@ -100,11 +88,9 @@
             </div>
         
             <div class="container text-center">
-        
               <div class="page-header min-height-300 border-radius-xl/ mt-4  wait-1s" data-animation="animated slideInDown" style="border-radius: 35px;">
                 <?php require $config['PARSERS_PATH'] . 'home' . DS . 'card_head.php' ?>
               </div>
-
               <div class="mx-4 mt-n6 text-center">
                 <div class="row">
                   <?php foreach ($home_array as $home_key => $home_val) : ?>
@@ -112,9 +98,7 @@
                   <?php endforeach; ?>
                 </div>
               </div>
-              
             </div>
-
           </div>
         </div>
       </div>
@@ -129,11 +113,9 @@
             </div>
         
             <div class="container text-center">
-        
               <div class="page-header min-height-300 border-radius-xl/ mt-4  wait-1s" data-animation="animated slideInDown" style="border-radius: 35px;">
                 <?php require $config['PARSERS_PATH'] . 'home' . DS . 'card_head.php' ?>
               </div>
-
               <div class="mx-4 mt-n6 text-center">
                 <div class="row">
                   <?php foreach ($home_array as $home_key => $home_val) : ?>
@@ -141,9 +123,7 @@
                   <?php endforeach; ?>
                 </div>
               </div>
-
             </div>
-        
           </div>
         </div>
       </div>
@@ -158,11 +138,9 @@
             </div>
         
             <div class="container text-center">
-        
               <div class="page-header min-height-300 border-radius-xl/ mt-4  wait-1s" data-animation="animated slideInDown" style="border-radius: 35px;">
                   <?php require $config['PARSERS_PATH'] . 'home' . DS . 'card_head.php' ?>
               </div>
-
               <div class="mx-4 mt-n6 text-center">
                 <div class="row">
                   <?php foreach ($home_array as $home_key => $home_val) : ?>
@@ -170,15 +148,11 @@
                   <?php endforeach; ?>
                 </div>
               </div>
-              
             </div>
-        
           </div>
         </div>
       </div>
 
     </div>
-
   </div>
-
 </div>

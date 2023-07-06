@@ -1,12 +1,13 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-12 shadow/ border-radius-xl bg-white p-0">
+        <div class="col-12 border-radius-xl bg-white p-0">
             <div class="card mb-4">
                 <div class="card-header pb-0">
-                    <h6> <span> Careers</span>
-                        <a type="button" class="btn btn-dark float-end border-radius-lg" onclick="requestModal(post_modal[28], post_modal[28], {'type':'career'})"> Add Career</a>
-                    </h6>
+                    <h5 class="text-secondary font-weight-bolder fs-4 ps-0 border-bottom p-3"> 
+                        <span  class="me-3 pt-4 nav-item"> Careers </span>
+                        <a type="button" class="btn btn-dark float-end border-radius-xl" onclick="requestModal(post_modal[28], post_modal[28], {'type':'career'})"> Add Career</a>
+                    </h5>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
                     <div class="table-responsive p-0">
@@ -16,7 +17,7 @@
                             <table class="table align-items-center mb-0">
                                 <thead>
                                     <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">#</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" style="width:1px">#</th>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Career Name</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Location</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Type</th>

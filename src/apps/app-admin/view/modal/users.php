@@ -114,15 +114,6 @@
                         </div>
                         <input type="hidden" class="invalid_text" value="Invalid List Position">
                     </div>
-
-                    <!-- <div class="form-floating mb-2 has-validation">
-                        <textarea id="description" class="form-control shadow-none" name="description" placeholder="User Description" rows="4" style="width: 100%;" required><?= (($usr_arr != null) ? $usr_arr['user_description'] : '') ?></textarea>
-                        <label for="event_title"> User Description </label>
-                        <div id="articleTitleFeedback" class="valid-feedback ps-3 mt-0">
-                            <span>Invalid User Description</span>
-                        </div>
-                        <input type="hidden" class="invalid_text" value="Invalid User Description">
-                    </div> -->
                 <?php else : ?>
                     <input type="hidden" name="position" value="Applicant/Executor">
                     <input type="hidden" name="list_position" value="0">

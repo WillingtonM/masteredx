@@ -34,7 +34,7 @@
     <br>
     <div class="row">
       <div class="col-12 text-center">
-        <img id="view_img" style="max-height: 350px;" class="float-left/ img-thumbnail img-responsive" src="./img/home/plain-bg.png" alt="">
+        <img id="view_img" style="max-height: 350px;" class="float-left/ img-thumbnail img-responsive" src="./img/home/plain-bg.png" alt="<?= $article_title ?>">
         <div class="">
           <?php if (isset($article_source) && $article_source != '') : ?>
             <small class="float-left/ text-muted"><i>Image source</i> &nbsp; | &nbsp; <?= $article_source ?></small>
