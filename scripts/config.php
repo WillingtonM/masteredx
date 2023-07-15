@@ -36,8 +36,8 @@ define("COMPANY_SHORT_NAME",        $_ENV['COMPANY_SHORT_NAME']);
 define("AUTHOR",                    'Willington Mhlanga');
 define("HOST_IS_LIVE",              TRUE);
 define("HOST_IS_LOCAL",             TRUE);
-define("PROJECT_LOG",               './img/home' . DS . 'logo.png');
-define("PROJECT_LOGO_WHITE",        './img/home' . DS . 'logo-white.png');
+define("PROJECT_LOG",               './img/home' . DS . 'logo.webp');
+define("PROJECT_LOGO_WHITE",        './img/home' . DS . 'logo-white.webp');
 define('SCRIPT_VERSION',            'v-2.00');
 
 define('CURRENT_TIMEZONE',          (date_default_timezone_get()) ? date_default_timezone_get() : date_default_timezone_set('GMT'));

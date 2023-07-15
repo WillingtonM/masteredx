@@ -18,7 +18,7 @@
         <div class="text-center social_med float-right bg-light p-3 border-radius-xl mb-3">
             <p class="p-0"> Follow us on social media </p>
             <?php foreach ($social_media as $key => $social) : ?>
-                <a class="nav-link/" href="<?= $social['link'] ?>" target="_blank"><i style="color: #555 !important;" class="<?= $social['font'] ?> fa-2x"></i></a>
+                <a class="nav-link/" href="<?= $social['link'] ?>" area-label="Follow us on <?= ucfirst($social['name']) ?>" target="_blank"><i style="color: #555 !important;" class="<?= $social['font'] ?> fa-2x"></i></a>
             <?php endforeach; ?>
         </div>
     </div>

@@ -17,9 +17,9 @@
         <img src="<?= PROJECT_LOGO_SMALL ?>" class="text-center" width="53" height="53" loading="lazy" alt="<?= PROJECT_TITLE ?>">
       </center>
       <div class="col w-100 side_btn_text border-radius-lg p-1">
-        <a class="text-center booking-text cursor-pointer">
+        <buttpn class="text-center booking-text cursor-pointer">
           <small class="font-weight-bolder">SUBSCRIBE</small>
-        </a>
+        </buttpn>
       </div>
     </div>
   <?php endif; ?>

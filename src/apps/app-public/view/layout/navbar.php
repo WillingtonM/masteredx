@@ -3,9 +3,9 @@
     <div class="row p-3">
       <div class="social_med col-12 p-0 px-3 bg-none text-dark">
         <?php foreach ($social_media as $key => $social) : ?>
-          <a class="float-end p-2" style="font-size: .9rem" href="<?= $social['link'] ?>" target="_blank"><i class="<?= $social['font'] ?> fa-2x/"></i></a>
+          <a class="float-end p-2" style="font-size: .9rem" href="<?= $social['link'] ?>" area-label="Follow us on <?= ucfirst($social['name']) ?>" target="_blank"><i class="<?= $social['font'] ?> fa-2x/"></i></a>
         <?php endforeach; ?>
-        <a class="float-end p-2" style="font-size: .9rem" href="mailto:info@<?= $_ENV['PROJECT_HOST'] ?>" target="_blank"> info@<?= $_ENV['PROJECT_HOST'] ?> </a>
+        <a class="float-end p-2" style="font-size: .9rem" href="mailto:info@<?= $_ENV['PROJECT_HOST'] ?>" aria-label="Email us on: info@<?= $_ENV['PROJECT_HOST'] ?> " target="_blank"> info@<?= $_ENV['PROJECT_HOST'] ?> </a>
       </div>
     </div>
     <div class="clear-fix"></div>
@@ -19,12 +19,12 @@
           <div class="container-fluid position-relative/">
 
             <a class="navbar-brand log-card d-none d-sm-block" href="home">
-              <img id="navbar-brand-img" class="brand_light" src="<?= PROJECT_LOGO_WHITE ?>" height="30" loading="lazy" alt="<?= PROJECT_TITLE ?>">
-              <img id="navbar-brand-img_" class="brand_dark" src="<?= PROJECT_LOGO ?>" height="30" loading="lazy" alt="<?= PROJECT_TITLE ?>">
+              <img id="navbar-brand-img" class="brand_light" src="<?= PROJECT_LOGO_WHITE ?>" height="30" width="" loading="lazy" alt="<?= PROJECT_TITLE ?>">
+              <img id="navbar-brand-img_" class="brand_dark" src="<?= PROJECT_LOGO ?>" height="30" width="" loading="lazy" alt="<?= PROJECT_TITLE ?>">
             </a>
 
             <a class="navbar-brand log-card d-block d-sm-none" href="home">
-              <img id="navbar-brand-img_x" src="<?= PROJECT_LOGO_WHITE ?>" height="30" loading="lazy" alt="<?= PROJECT_TITLE ?>">
+              <img id="navbar-brand-img_x" src="<?= PROJECT_LOGO_WHITE ?>" height="30" width="" loading="lazy" alt="<?= PROJECT_TITLE ?>">
             </a>
 
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
               <ul class="navbar-nav mx-auto/ justify-content-end">
                 <li class="nav-item">
-                  <a class=""> &nbsp; </a>
+                  <span class=""> &nbsp; </span>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link nav_text def_text <?= ((isset($page) && $page == "about") ? 'active nav_text_left' : '') ?>" href="about"><i class="fa-solid fa-circle-info me-1"></i> About</a>
@@ -112,7 +112,7 @@
               </ul>
               <ul class="navbar-nav d-lg-block d-none">
                 <li class="nav-item ms-3">
-                  <a type="button" class="nav-link btn btn-sm/ mb-0 border-radius-xl px-3 btn-dark text-white" style="color: white !important" onclick="requestModal(post_modal[9], post_modal[9], {})"> Enquiry </a>
+                  <buttpn type="button" class="nav-link btn btn-sm/ mb-0 border-radius-xl px-3 btn-dark text-white" style="color: white !important" onclick="requestModal(post_modal[9], post_modal[9], {})"> Enquiry </buttpn>
                 </li>
               </ul>
               

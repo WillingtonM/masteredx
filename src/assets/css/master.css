@@ -1474,7 +1474,7 @@ iframe {
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
-  height: 4em;
+  /* height: 4em; */
 }
 
 .loader {
@@ -1910,7 +1910,7 @@ iframe {
 } */
 
 .container-contact, .container-about {
-  background-image: url('../img/home/bg-2.png');
+  background-image: url('../img/home/bg-2.webp');
   /* background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1948,7 +1948,7 @@ iframe {
 
   
   .container-home, .container-services {
-    background-image: url('../img/home/bg-1.png');
+    background-image: url('../img/home/bg-1.webp');
     /* background-size: cover;
     background-repeat: no-repeat; */
     background-position: center right;

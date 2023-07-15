@@ -51,7 +51,7 @@
                             <hr class="horizontal dark mt-0">
 
                             <?php foreach ($social_media as $key => $social) : ?>
-                                <a class="text-dark me-4" href="<?= $social['link'] ?>" target="_blank"><i class="<?= $social['font'] ?> fa-2x"></i></a>
+                                <a class="text-dark me-4" href="<?= $social['link'] ?>" area-label="Follow us on <?= ucfirst($social['name']) ?>" target="_blank"><i class="<?= $social['font'] ?> fa-2x"></i></a>
                             <?php endforeach; ?>
                         </div>
                     </div>

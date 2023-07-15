@@ -1,4 +1,6 @@
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: gap: https://ssl.gstatic.com https://*.bootstrap.com https://*.jsdelivr.net https://*.fontawesome.com https://fonts.googleapis.com https://fonts.gstatic.com https://code.jquery.com https://www.googletagmanager.com https://www.google-analytics.com/; img-src 'self' data: content:; font-src 'self' fonts.gstatic.com data: https://*.fontawesome.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com https://*.fontawesome.com; media-src *; ">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=<?= (isset($_ENV['G_ANALYTIC'])) ? $_ENV['G_ANALYTIC'] : '' ?>"></script>
   <script>
@@ -8,11 +10,10 @@
 
     gtag('config', '<?= (isset($_ENV['G_ANALYTIC'])) ? $_ENV['G_ANALYTIC'] : '' ?>');
   </script>
-  <meta charset="UTF-8" />
   
   <?php $head_title = (isset($project_apps[$_SESSION['active_app']]['slog']) && !empty($project_apps[$_SESSION['active_app']]['slog'])) ? $project_apps[$_SESSION['active_app']]['slog'] : $_ENV['PROJECT_SLOG']; ?>
   <title><?= ($page == 'article' && isset($req_res)) ? $req_res['article_title'] : strtoupper($page) . ' | ' . PROJECT_TITLE . ' - ' . $head_title ?></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="<?= $_ENV['PROJECT_DSCPT_SHORT'] ?>">
   <meta name="keywords" content="<?= $_ENV['PROJECT_DSCPT'] ?>">
   <meta name="note" content="">
