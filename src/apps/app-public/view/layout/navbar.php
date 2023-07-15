@@ -51,127 +51,6 @@
                 <li class="nav-item">
                   <a class="nav-link nav_text def_text <?= ((isset($page) && $page == "services") ? 'active nav_text_left' : '') ?>" href="services"><i class="fa-solid fa-building me-1"></i> Services </a>
                 </li>
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link nav_text def_text dropdown-toggle <?= ((isset($page) && $page == "services") ? 'active nav_text_left' : '') ?>" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-building me-1"></i> Services
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-animation dropdown-menu-start dropdown-lg mt-0 mt-lg-4 p-3" aria-labelledby="navbarDropdownMenuLink" style="border-radius: 15px 15px; border: none !important; overflow-x: hidden !important; overflow-y: hidden !important; background: rgb(0, 0, 0, .9)">
-                    <?php $count_limit  = 2; ?>
-                    <?php $count        = 0; ?>
-
-                    <div class="row">
-                      <div class="col-12 col-md-6">
-                        <?php foreach ($services_navba as $nav_key => $nav_val) : ?>
-                          <?php $count++; ?>
-                          <a class="w-100 px-2" href="services?tab=<?= $nav_key ?>">
-                            <div class="d-flex align-items-center">
-                              <div class="flex-shrink-0">
-                                <?php if ($nav_key == 'podcast') : ?>
-                                  <span class="ps-1 pe-1/"><i class="<?= $nav_val['imgs'] ?> fa-2x text-white"></i></span> 
-                                <?php else: ?>
-                                  <i class="<?= $nav_val['imgs'] ?> fa-2x"></i>
-                                <?php endif; ?>
-                              </div>
-                              <div class="flex-grow-1 ms-3">
-                                <p class="p-0 m-0 text-xs"><?= $nav_val['short'] ?></p>
-                                <small class="text-xxs"> <?= $nav_val['long'] ?> </small>
-                              </div>
-                            </div>
-                          </a>
-                          <?php if ($count == $count_limit) break ?>
-
-                        <?php endforeach; ?>
-                      </div>
-
-                      <?php $count = 0; ?>
-                      <div class="col-12 col-md-6">
-                        <?php foreach ($services_navba as $nav_key => $nav_val) : ?>
-                          <?php $count++; ?>
-                          <?php if ($count <= $count_limit) continue; ?>
-                          <a class="w-100 px-2" href="services?tab=<?= $nav_key ?>">
-                            <div class="d-flex align-items-center">
-                              <div class="flex-shrink-0">
-                                <?php if ($nav_key == 'podcast') : ?>
-                                  <span class="ps-1 pe-1/"><i class="<?= $nav_val['imgs'] ?> fa-2x text-white"></i></span> 
-                                <?php else: ?>
-                                  <i class="<?= $nav_val['imgs'] ?> fa-2x"></i>
-                                <?php endif; ?>
-                              </div>
-                              <div class="flex-grow-1 ms-3">
-                                <p class="p-0 m-0 text-xs"><?= $nav_val['short'] ?></p>
-                                <small class="text-xxs"> <?= $nav_val['long'] ?> </small>
-                              </div>
-                            </div>
-                          </a>
-                          <?php //if ($count == 4) break 
-                          ?>
-
-                        <?php endforeach; ?>
-                      </div>
-                    </div>
-                  </div>
-
-                </li> -->
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link font-weight-bolder dropdown-toggle <?= ((isset($page) && $page == "media") ? 'active nav_text_left' : '') ?>" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-camera-retro me-1"></i> Media
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-animation dropdown-menu-end/ dropdown-lg mt-0 mt-lg-4 p-3" aria-labelledby="navbarDropdownMenuLink" style="border-radius: 15px 15px; border: none !important; overflow-x: hidden !important; overflow-y: hidden !important; background: rgb(0, 0, 0, .9)">
-                    <?php $count_limit  = 3; ?>
-                    <?php $count        = 0; ?>
-
-                    <div class="row">
-                      <div class="col-12 col-md-6">
-                        <?php foreach ($media_navba as $nav_key => $nav_val) : ?>
-                          <?php $count++; ?>
-                          <a class="w-100 px-2" href="media?tab=<?= $nav_key ?>">
-                            <div class="d-flex align-items-center">
-                              <div class="flex-shrink-0">
-                                <?php if ($nav_key == 'podcast') : ?>
-                                  <span class="ps-1 pe-1/"><i class="<?= $nav_val['imgs'] ?> fa-2x text-white"></i></span> 
-                                <?php else: ?>
-                                  <i class="<?= $nav_val['imgs'] ?> fa-2x"></i>
-                                <?php endif; ?>
-                              </div>
-                              <div class="flex-grow-1 ms-3">
-                                <p class="p-0 m-0 text-xs"><?= $nav_val['short'] ?></p>
-                                <small class="text-xxs"> <?= $nav_val['long'] ?> </small>
-                              </div>
-                            </div>
-                          </a>
-                          <?php if ($count == $count_limit) break ?>
-
-                        <?php endforeach; ?>
-                      </div>
-
-                      <?php $count = 0; ?>
-                      <div class="col-12 col-md-6">
-                        <?php foreach ($media_navba as $nav_key => $nav_val) : ?>
-                          <?php $count++; ?>
-                          <?php if ($count <= $count_limit) continue; ?>
-                          <a class="w-100 px-2" href="media?tab=<?= $nav_key ?>">
-                            <div class="d-flex align-items-center">
-                              <div class="flex-shrink-0">
-                                <?php if ($nav_key == 'podcast') : ?>
-                                  <span class="ps-1 pe-1/"><i class="<?= $nav_val['imgs'] ?> fa-2x text-white"></i></span> 
-                                <?php else: ?>
-                                  <i class="<?= $nav_val['imgs'] ?> fa-2x"></i>
-                                <?php endif; ?>
-                              </div>
-                              <div class="flex-grow-1 ms-3">
-                                <p class="p-0 m-0 text-xs"><?= $nav_val['short'] ?></p>
-                                <small class="text-xxs"> <?= $nav_val['long'] ?> </small>
-                              </div>
-                            </div>
-                          </a>
-                          <?php //if ($count == 4) break 
-                          ?>
-
-                        <?php endforeach; ?>
-                      </div>
-                    </div>
-                  </div>
-                </li> -->
                 <li class="nav-item dropdown">
                   <a class="nav-link nav_text def_text dropdown-toggle <?= ((isset($page) && $page == "resources") ? 'active nav_text_left' : '') ?>" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-sharp fa-regular fa-registered me-1"></i> Resources
@@ -232,7 +111,7 @@
                 </li>
               </ul>
               <ul class="navbar-nav d-lg-block d-none">
-                <li class="nav-item">
+                <li class="nav-item ms-3">
                   <a type="button" class="nav-link btn btn-sm/ mb-0 border-radius-xl px-3 btn-dark text-white" style="color: white !important" onclick="requestModal(post_modal[9], post_modal[9], {})"> Enquiry </a>
                 </li>
               </ul>

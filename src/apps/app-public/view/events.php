@@ -1,8 +1,8 @@
 <div class="container pt-10 min-vh-100">
     <div class="page-header min-height-200 border-radius-xl/ mt-4 wait-2s" data-animation="animated pulse" style="border-radius: 35px;">
-        <span class="mask" style="background-color: rgb(41, 55, 75, .5);">
+        <span class="mask" style="background-color: rgb(41, 55, 75, .9);">
             <div class="p-0">
-                <div class="text-center py-3 pt-5">
+                <div class="text-center px-3 pt-5">
                     <h3 class="font-weight-bolder text-white"> Our <span class="text-warning"> Events </span> & Schedules </h3>
                     <small class="m-0 text-light">
                         See our upcoming and previous Events and Schedules

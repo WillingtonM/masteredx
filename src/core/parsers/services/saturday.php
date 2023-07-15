@@ -1,6 +1,6 @@
 <div class="col mb-3">
 
-    <p class="text-sm px-3 pt-3">
+    <p class="px-3 pt-3">
         We specialize in providing extra lessons for learners in grades 10 to 12 around Gauteng. 
         Our core subjects include <b>Mathematics</b>, <b>English</b>, and <b>Physical Sciences</b>. 
         Our Saturday classes focus on the following:
@@ -15,13 +15,13 @@
     </ul>
 </div>
 
-<div class="col mb-3 px-3">
+<div class="col mb-3 p-3">
     <h5 class="font-weight-bolder">Operating Hours: </h5>
 
     <h6>On Saturdays, our classes run from 08H00 to 14H00, ensuring ample time for in-depth learning and thorough understanding of the topics covered.</h6>
 </div>
 
-<div class="col mb-3 px-3">
+<div class="col mb-3 px-3 pb-3">
     <h5 class="font-weight-bolder">Enrollment Process: </h5>
 
     <p>

@@ -9,7 +9,7 @@
     
                     <div class="col-12 text-center">
                         <br>
-                        <img class="img text-center" src="<?= PROJECT_LOGO ?>" alt="<?= PROJECT_TITLE ?> Logo" width="150px" height="150px">
+                        <img class="img text-center" src="<?= PROJECT_LOGO_SMALL?>" alt="<?= PROJECT_TITLE ?> Logo" width="150px" height="150px">
                     </div>
                     <div class="col-12 text-center text-dark mt-4">
                         <p class="">

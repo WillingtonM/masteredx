@@ -15,23 +15,8 @@ function success_msg(msg) {
   return output;
 }
 /* options| primary, secondary, info, danger, warning, success */
-
-
 function message_alert(msg, type) {
   return '<div class="alert alt_alert_' + type + '" role="alert">' + msg + '</div>';
-}
-
-function data_err(data, id) {
-  err_data = data.error;
-
-  if (is_json_string(err_data)) {
-    $.each(err_data, function (index, value) {
-      $.each(value, function (ind, val) {
-        $('#' + id).html(alert_msg(val));
-      });
-    });
-  } else {// console.log("there was an erro in JSON data");
-  }
 }
 
 function validate_email(email) {
@@ -58,14 +43,11 @@ function requestModal(url, modal_id, data) {
     }, data);
   }
 
-  console.log(url);
-
   $.ajax({
     url: url,
     data: data,
     method: "POST",
     success: function success(data) {
-      console.log(data);
       $('#modalDiv').html(data);
       $('#' + modal_id).modal('toggle');
     },
@@ -133,10 +115,6 @@ function on_enter(click, trigger) {
   });
 }
 
-function imgUploadClick(trigerDiv) {
-  $('#' + trigerDiv)[0].click();
-}
-
 function is_json_string(data) {
   try {
     JSON.parse(data);
@@ -144,8 +122,9 @@ function is_json_string(data) {
   } catch (e) {
     return false;
   }
-} // ************************** Post Functions
+}
 
+// ************************** Post Functions
 
 function postCheck(htmlid, data) {
   var url_val = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
@@ -161,13 +140,13 @@ function postCheck(htmlid, data) {
       'get_type': post_type[0],
       'token': token
     }, data);
-    console.log(data);
+    // console.log(data);
     $.ajax({
       url: path_action,
       method: "POST",
       data: data,
       success: function success(data) {
-        console.log(data);
+        // console.log(data);
 
         if (is_json_string(data)) {
           data = JSON.parse(data);
@@ -354,7 +333,6 @@ function postFile(htmlid, img_id, data) {
     processData: false,
     contentType: false,
     success: function success(data) {
-      // console.log(data);
       if (is_json_string(data)) {
         data = JSON.parse(data);
 
@@ -398,7 +376,6 @@ function postFile3(htmlid, form_id) {
     processData: false,
     contentType: false,
     success: function success(data) {
-      // console.log(data);
       if (is_json_string(data)) {
         data = JSON.parse(data);
 
@@ -459,7 +436,6 @@ function postFile2(alt_input, form_id) {
     processData: false,
     contentType: false,
     success: function success(data) {
-      // console.log(data);
       if (is_json_string(data)) {
         data = JSON.parse(data);
 
@@ -514,53 +490,6 @@ function doAnimations(elems) {
   });
 }
 
-function surveySubmit(htmlid, survey_id) {
-  var consent_check = $('#' + survey_id + '_consent').is(":checked");
-
-  if (consent_check) {
-    data = $('#' + survey_id).serialize();
-    data = data + '&' + post_data_default + '&survey_submission=' + true;
-    var usg = $('input[name="gender_user"]:checked').val();
-    var usr = $('input[name="gender_request"]:checked').val();
-    data = data + '&gender_user=' + usg + '&gender_request=' + usr;
-    $.ajax({
-      url: path_action,
-      method: "POST",
-      data: data,
-      success: function success(data) {
-        // console.log(data);
-        if (is_json_string(data)) {
-          data = JSON.parse(data);
-
-          if (data.success == true && data.error == false) {
-            $('#' + htmlid).html(success_msg(data.message));
-            ret = true;
-
-            if (data.url != '') {// location.reload();
-            }
-          } else if (data.error = true) {
-            $('#' + htmlid).html(alert_msg(data.message));
-          }
-        }
-      },
-      error: function error(XMLHttpRequest, textStatus, errorThrown) {
-        var err_message = 'There was an error on your request ! : ' + XMLHttpRequest.statusText;
-        var modal_alert = $('#modal_alert_check');
-
-        if (modal_alert.length > 0 && parseInt(modal_alert.val()) == 0) {
-          requestModal(post_modal[14], post_modal[14], {
-            'modal_err': true,
-            'modal_msg': err_message
-          });
-          modal_alert.val(1);
-        } else {}
-      }
-    });
-  } else {
-    $('#' + htmlid).html(alert_msg("Please check the consent checkbox below to submit the survey"));
-  }
-}
-
 function changeURL(param) {
   var get_var = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'tab';
   var url = new URL(window.location.href);
@@ -606,7 +535,6 @@ function modal_post() {
       method: 'post',
       data: data_1,
       success: function success(data) {
-        console.log(data);
         if (is_json_string(data)) {
           data = JSON.parse(data);
 
@@ -619,7 +547,6 @@ function modal_post() {
               processData: false,
               contentType: false,
               success: function success(data) {
-                // console.log(data);
                 if (is_json_string(data)) {
                   data = JSON.parse(data);
 
@@ -675,7 +602,6 @@ function media_post() {
       method: 'post',
       data: data_1,
       success: function success(data) {
-        console.log(data);
         if (is_json_string(data)) {
           data = JSON.parse(data);
           var img_file = $('#file_doc').val();
@@ -689,7 +615,6 @@ function media_post() {
               processData: false,
               contentType: false,
               success: function success(data) {
-                console.log(data);
                 if (is_json_string(data)) {
                   data = JSON.parse(data);
 
@@ -739,7 +664,6 @@ function modal_user_post() {
   data_1 = post_data_default + '&' + data_1;
 
   // add info to data_2
-  console.log(data_1);
   data_2.append('token', token);
   data_2.append('get_type', post_type[0]);
   data_2.append('url', post_urls[2]);
@@ -755,7 +679,6 @@ function modal_user_post() {
 
         if (is_json_string(data)) {
           data = JSON.parse(data);
-          console.log(data);
           if (data.success == true && image == 1 || $('#product_id').length != 0) {
             $('#error_pop').html(success_msg(data.message));
             $.ajax({
@@ -765,7 +688,6 @@ function modal_user_post() {
               processData: false,
               contentType: false,
               success : function(data){
-                console.log(data);
                 if (is_json_string(data)) {
                   data = JSON.parse(data);
                   if (data.success == true) {
@@ -778,9 +700,7 @@ function modal_user_post() {
                   if (data.url == 'refresh') {
                     location.reload();
                   }
-                } else {
-                  console.log(data);
-                }
+                } 
               },
               error : function(){alert("Something went wrong");}
             });
@@ -794,9 +714,7 @@ function modal_user_post() {
             $('#error_pop').html(alert_msg(data.message));
           }
 
-        } else {
-          console.log(data);
-        }
+        } 
       },
       error : function(){alert("Something went wrong");}
     });
@@ -874,12 +792,6 @@ function srolltodiv(div) {
   }, 1500);
 }
 
-function shift_upld_file(modal_id) {
-  $('#file_uplod').html($('#file_upld_cntnr').html());
-  closeModalByID(modal_id);
-} // twitter 
-
-
 function TwtCheck($data) {
   data = Object.assign({
     'url': post_urls[0],
@@ -891,7 +803,6 @@ function TwtCheck($data) {
     method: "POST",
     data: data,
     success: function success(data) {
-      // console.log(data);
       if (is_json_string(data)) {
         data = JSON.parse(data);
 

@@ -1,10 +1,10 @@
 <div class="col mb-2">
 
-    <p class="text-sm pt-3">
+    <p class="px-3">
         Exam preparation is important for achieving academic success. The webinars are designed to equip learners with the tools and knowledge they need to excel in their exams.
         Our webinars are led by experienced subject matter experts who are able to assist learners with exam preparation by working through questions and providing valuable practical tips. 
     </p>
-    <p class="text-sm px-3">
+    <p class="px-3">
         Key Features of our Exam Preparation Webinars:
     </p>
 

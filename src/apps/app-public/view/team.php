@@ -1,12 +1,12 @@
    <div id="contact_elem" class="container pt-10 min-vh-100">
        <div class="page-header min-height-300 mt-4 wait-2s" data-animation="animated pulse" style="border-radius: 35px;">
-           <span class="mask opacity-6" style="background-color: rgb(41, 55, 75, .5); ">
+           <span class="mask" style="background-color: rgb(41, 55, 75, .9); ">
 
                <div class="p-0">
-                   <div class="text-center py-3 pt-5">
+                   <div class="text-center px-3 pt-5">
                        <!-- <h3 class="font-weight-bolder text-white"> <i class="me-2">Our</i> <span class="text-warning"> Tutors </span> </h3> -->
                        <small class="m-0 text-white fs-5">
-                           <?= PROJECT_TITLE ?> prides itself on its amazing, smart, spirited, hardworking, dynamic, and flexible working culture. <br> feel free to get in touch with our xTeam.
+                           <?= PROJECT_TITLE ?> prides itself on its amazing, smart, spirited, hardworking, and dynamic team. <br> Feel free to get in touch with our <span class="text-warning">x</span>Team.
                        </small>
                    </div>
                </div>

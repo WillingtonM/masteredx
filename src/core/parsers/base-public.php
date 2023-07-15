@@ -31,13 +31,13 @@
 
   <main class="main-content position-relative max-height-vh-100 h-100 p-0 m-0 border-radius-lg ">
 
-    <div id="container-1" class="container-<?= $page ?>">
+    <div id="container-1" class="container-<?= $page ?> p-0">
       <?php if (!in_array($page, $page_excludes) || (isset($_SESSION['user_id']) && $_SESSION['user_status'] == TRUE && in_array($page, $page_excludes))) : ?>
         <div id="body" class="body_div/ container-fluid <?= ((isset($_SESSION['window_resize']) && $_SESSION['window_resize'] == true) ? 'body_toggle' : '') ?>">
           <?php require_once $main_content; ?>
         </div>
       <?php elseif (isset($_SESSION['user_id']) || (in_array($page, $page_excludes))) : ?>
-        <div id="" class="container<?= ($page == 'login') ? '-fluid':'' ?>" <?php if($page == 'login'): ?> style="background: rgb(0, 0, 0, .8) !important;"<?php endif; ?>>
+        <div id="" class="main-child container<?= ($page == 'login') ? '':'' ?> p-0">
           <?php require_once $main_content; ?>
         </div>
       <?php endif; ?>

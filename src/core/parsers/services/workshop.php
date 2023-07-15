@@ -1,12 +1,11 @@
-<div class="col shadow/ bg-white/ p-3 border-radius-xl mb-2 text-center/">
-
-    <p class="text-sm pt-3">
+<div class="col mb-3">
+    <p class="px-3">
         We are delighted to present our range of interactive workshops designed to enhance learners' learning experience and expand their knowledge in various subjects. 
         At MasteredX, we understand the importance of hands-on learning and the power of practical application in reinforcing theoretical concepts. 
         That is why our workshops are carefully crafted to provide learners with engaging and immersive educational experiences.
     </p>
 
-    <p class="text-sm pt-3">
+    <p class="px-3">
         Our workshops cover a diverse array of subjects and topics, allowing learners to delve deeper into specific areas of interest or address challenging concepts. 
         Led by our team of experienced professionals, these workshops offer a unique opportunity for learners to interact with subject matter experts and gain valuable insights beyond the confines of the classroom.
     </p>

@@ -11,13 +11,13 @@
   <?php endif; ?> -->
 
   <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
-    <div class="container p-0 m-0/">
+    <div class="main-child container p-0 m-0/">
       <?php if (!in_array($page, $page_excludes) || $_SESSION['merchant_status'] == TRUE) : ?>
       <?php require_once $navbar; ?>
     <?php endif; ?>
     </div>
 
-    <div class="container py-4" style="min-height: 100vh;">
+    <div class="main-child container py-4 px-0" style="min-height: 100vh;">
 
       <?php require_once $main_content; ?>
 

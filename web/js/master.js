@@ -48,12 +48,14 @@ $(document).ready(function () {
 
   var cookie_res = getCookie('email_subscribe');
 
-  if (cookie_res != null) {// console.log(document.cookie);
-  } else {
-    setTimeout(function () {
-      requestModal(post_modal[8], post_modal[8], {});
-    }, 1500);
-  } // if ($('#subscription_active').length > 0 && $('#subscription_active').val() == 1 ) {
+  // if (cookie_res != null) {// console.log(document.cookie);
+  // } else {
+  //   setTimeout(function () {
+  //     requestModal(post_modal[8], post_modal[8], {});
+  //   }, 1500);
+  // } 
+  
+  // if ($('#subscription_active').length > 0 && $('#subscription_active').val() == 1 ) {
   //   console.log('subscription_active');
   //   var cookie_res = getCookie('email_subscribe');
   //   if (cookie_res != null) {
@@ -351,25 +353,32 @@ $(document).ready(function () {
     'damping': 0.1
   }; // Scrollbar.init(document.querySelector('#body-div'), options);
 });
+
 $(window).resize(function () {
   window_width = window.innerWidth;
   var scrollTop = $(window).scrollTop();
   var elementOffset = $('#headnav').length > 0 ? $('#headnav').offset().top : 0; // var elementOffset = $('#headnav').offset().top;
 
   var distance = elementOffset - scrollTop;
+  console.log(distance);
 
   if (distance < 60 && window_width >= 991) {
     $('#navbar-brand-img').removeClass('brand-img').addClass('log-ease');
     $('.slogan_card').addClass('slogan_card_sm');
     $('.name_ref').removeClass('name_card').addClass("name_card_small");
+    // $('.main-child').removeClass('container-fluid').addClass('container');
+    console.log("hello");
   } else if (window_width >= 991) {
     $('#navbar-brand-img').addClass('brand-img').removeClass('log-ease');
     $('.name_ref').addClass('name_card').removeClass("name_card_small");
     $('.slogan_card').removeClass('slogan_card_sm');
+    // $('.main-child').removeClass('container-fluid').addClass('container');
+    // console.log("hello");
   } else if (window_width) {
     $('#navbar-brand-img').removeClass('brand-img').addClass('log-ease');
     $('.slogan_card').addClass('slogan_card_sm');
     $('.name_ref').removeClass('name_card').addClass("name_card_small");
+    // $('.main-child').removeClass('container-fluid').addClass('container');
   }
 
   $(window).bind('scroll', function () {
@@ -501,6 +510,7 @@ $(document).ready(function () {
 //         }
 //     });
 // });  
-// on enter keys
 
+
+// on enter keys
 on_enter('search_input', 'search_btn');

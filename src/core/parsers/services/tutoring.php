@@ -1,9 +1,9 @@
 <div class="col-12 mb-3">
-    <h5 class="text-dark">
+    <h5 class="text-dark px-3">
         Experience Personalized Online Tutoring from the Comfort of Your Home
     </h6>
 
-    <p>
+    <p class="px-3">
         At MasteredX, we understand the importance of personalized education and the convenience of learning from home. 
         Our online tutoring services provide you with the opportunity to receive one-on-one tutoring sessions tailored to your specific needs, all from the comfort of your own home. 
         With qualified and reliable tutors experienced in creating interactive and effective tutoring sessions, we ensure that you receive the support you need to excel in your studies.

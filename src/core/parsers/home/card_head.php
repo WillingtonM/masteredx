@@ -1,4 +1,4 @@
-<span class="mask opacity-6/" style="background-color: rgb(41, 55, 75, .5); ">
+<span class="mask" style="background-color: rgb(41, 55, 75, .9); ">
     <div class="p-0">
     <div id="top_logo_text_carsl" class="text-center p-3 d-none/ d-lg-block/">
     </div>
